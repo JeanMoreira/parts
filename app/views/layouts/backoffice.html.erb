@@ -1,6 +1,15 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title>Parts</title>
     <%= csrf_meta_tags %>
 
@@ -9,9 +18,16 @@
     
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-    <%= yield %>
-  </body>
+</head>
+
+<body>
+    <div id="wrapper">
+        <%= yield %>
+        <!-- Navigation -->
+     </div>  
+
+
+</body>
+
 </html>

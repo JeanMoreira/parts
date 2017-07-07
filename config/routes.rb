@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   namespace :site do
-    get 'home/index'
+    get 'home', to: 'home#index'
   end
 
+  # vai analisar um caminho chamado backoffice que logo depois vai ter o dashbard
+  # que vai redirecionar para o metodo da controller dashboard index.
   namespace :backoffice do
-    get 'dashboard/index'
+    get 'dashboard', to: 'dashboard#index'
   end
 
   resources :parts

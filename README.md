@@ -15,6 +15,10 @@
 
   docker-compose run --rm website bundle exec rake db:create
 
+# Create tables
+
+  docker-compose run --rm website bundle exec rake db:migrate
+
 # Run
 
   docker-compose up
