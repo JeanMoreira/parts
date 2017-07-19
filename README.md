@@ -23,3 +23,7 @@
 
   docker-compose up
 
+
+# seed
+
+  docker-compose run --rm website bundle exec rake db:seed
