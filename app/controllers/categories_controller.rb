@@ -1,8 +1,6 @@
-class CategoriesController < ApplicationController
+class CategoriesController < BackofficeController
+
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
-  layout "backoffice"
-
 
   # GET /categories
   # GET /categories.json
