@@ -9862,3 +9862,541 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 203ms (Views: 184.1ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:28:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (4.0ms)
+  Rendered categories/new.html.erb within layouts/backoffice (11.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 262ms (Views: 220.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/templates/sb-admin/vendor/bootstrap/css/bootstrap.min.css.map" for 172.18.0.1 at 2017-07-19 16:29:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/templates/sb-admin/vendor/bootstrap/css/bootstrap.min.css.map"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [82 times] (26.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.4ms)
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:32:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.2ms)
+  Rendered categories/new.html.erb within layouts/backoffice (8.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 173ms (Views: 163.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:34:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (81.9ms)
+  Rendered categories/new.html.erb within layouts/backoffice (97.0ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `action_message' for #<#<Class:0x007f7aae241640>:0x007f7aa4da6b20>
+Did you mean?  action_name):
+    1: <div class="panel panel-default">
+    2:   <div class="panel-heading">
+    3:     <%= action_message %>
+    4:   </div>
+    5:   <!-- /.panel-heading -->
+    6:   <div class="panel-body">
+  
+app/views/categories/_form.html.erb:3:in `_app_views_categories__form_html_erb___911962235660017627_70082364156180'
+app/views/categories/new.html.erb:3:in `_app_views_categories_new_html_erb__3285725302178444346_70082364259420'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.2ms)
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:34:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/backoffice (7.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 184ms (Views: 175.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:35:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.3ms)
+  Rendered categories/new.html.erb within layouts/backoffice (8.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 165.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:41:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (1.9ms)
+  Rendered categories/new.html.erb within layouts/backoffice (7.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 173ms (Views: 164.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:42:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/backoffice (8.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 181ms (Views: 170.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:43:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.9ms)
+  Rendered categories/new.html.erb within layouts/backoffice (25.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 244ms (Views: 215.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:44:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/new.html.erb within layouts/backoffice (8.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 270ms (Views: 260.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:46:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (1.7ms)
+  Rendered categories/new.html.erb within layouts/backoffice (8.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 177ms (Views: 168.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-07-19 16:46:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (1.5ms)
+  Rendered categories/new.html.erb within layouts/backoffice (8.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 183ms (Views: 172.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/categories" for 172.18.0.1 at 2017-07-19 16:46:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1fXF+hpq/ymfjPSuOAOm4croPso37pFB+DpK5Dt+c+5dtDJxyrQnSRM6cZNmO0yt9kvJDP9o8LmY0qCULTCq0A==", "category"=>{"description"=>"Lataria"}}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "Lataria"], ["created_at", "2017-07-19 16:46:39.396956"], ["updated_at", "2017-07-19 16:46:39.396956"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/6
+Completed 302 Found in 20ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/categories/6" for 172.18.0.1 at 2017-07-19 16:46:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/backoffice
+  Rendered categories/show.html.erb within layouts/backoffice (1.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 296ms (Views: 275.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-07-19 16:46:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (2.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 258ms (Views: 245.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/2/edit" for 172.18.0.1 at 2017-07-19 16:47:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (1.5ms)
+  Rendered categories/edit.html.erb within layouts/backoffice (8.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 164.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/4/edit" for 172.18.0.1 at 2017-07-19 16:47:25 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (1.4ms)
+  Rendered categories/edit.html.erb within layouts/backoffice (8.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 181ms (Views: 170.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-07-19 16:47:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (2.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 200ms (Views: 181.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/5/edit" for 172.18.0.1 at 2017-07-19 16:47:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/edit.html.erb within layouts/backoffice (16.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 337ms (Views: 318.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-07-19 16:47:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (2.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 229ms (Views: 214.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/6/edit" for 172.18.0.1 at 2017-07-19 16:47:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (4.1ms)
+  Rendered categories/edit.html.erb within layouts/backoffice (20.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 257ms (Views: 245.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-07-19 16:47:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (2.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 194ms (Views: 183.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/1/edit" for 172.18.0.1 at 2017-07-19 16:47:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.3ms)
+  Rendered categories/edit.html.erb within layouts/backoffice (13.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 325ms (Views: 298.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-07-19 16:47:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (3.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 226ms (Views: 214.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/4/edit" for 172.18.0.1 at 2017-07-19 16:47:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/edit.html.erb within layouts/backoffice (19.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 341ms (Views: 308.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-07-19 16:47:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (2.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 201ms (Views: 189.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/5/edit" for 172.18.0.1 at 2017-07-19 16:47:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (1.7ms)
+  Rendered categories/edit.html.erb within layouts/backoffice (14.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 211ms (Views: 191.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-07-19 16:58:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (3.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 221ms (Views: 206.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-07-19 16:59:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (1.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 121ms (Views: 113.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-07-25 00:44:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (3.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (19.3ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.2ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 2369ms (Views: 2317.9ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-07-25 00:44:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 113ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-07-25 00:44:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (1.7ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (80.1ms)
+Completed 200 OK in 922ms (Views: 885.0ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-07-25 00:44:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D4UjUSRgX/pPTV5o3kaRM60fjkuES5G6OM739BHSNOBS9xUO4DTGjH+KMeju8OmrCdCQjrSvJjBcW9y7xOlPtg==", "admin"=>{"email"=>"jean-moreira@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (8.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "jean-moreira@live.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.7ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "admins"."id" = $4[0m  [["current_sign_in_at", "2017-07-25 00:44:38.077907"], ["sign_in_count", 2], ["updated_at", "2017-07-25 00:44:38.083455"], ["id", 1]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 412ms (ActiveRecord: 17.5ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-07-25 00:44:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 348ms (Views: 313.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-07-25 00:44:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (14.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 503ms (Views: 456.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/1/edit" for 172.18.0.1 at 2017-07-25 00:44:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/edit.html.erb within layouts/backoffice (9.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 218ms (Views: 190.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/parts" for 172.18.0.1 at 2017-07-25 00:45:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (Unable to autoload constant PartsController, expected /parts/app/controllers/parts_controller.rb to define it):
+  
+activesupport (5.0.4) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.0.4) lib/active_support/dependencies.rb:203:in `const_missing'
+activesupport (5.0.4) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.4) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.4) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.4) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.4) lib/active_support/inflector/methods.rb:266:in `constantize'
+activesupport (5.0.4) lib/active_support/dependencies.rb:583:in `get'
+activesupport (5.0.4) lib/active_support/dependencies.rb:614:in `constantize'
+actionpack (5.0.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.6ms)
+Started GET "/categories" for 172.18.0.1 at 2017-07-25 00:45:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (3.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 188ms (Views: 175.3ms | ActiveRecord: 1.4ms)
+
+
