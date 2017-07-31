@@ -41,6 +41,8 @@ gem 'rails-erd'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+gem 'rails-assets-bootbox', source: 'https://rails-assets.org'
 #Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
 

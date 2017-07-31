@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+
   namespace :site do
     get 'home', to: 'home#index'
   end
@@ -8,15 +10,17 @@ Rails.application.routes.draw do
   # que vai redirecionar para o metodo da controller dashboard index.
   namespace :backoffice do
     get 'dashboard', to: 'dashboard#index'
+    resources :admins, except: [:show]
+    get 'admins/index'
   end
   resources :parts
-  resources :categories
+  resources :categories, except:[:show]
   resources :cars
   resources :companies
   resources :phones
   resources :addresses
 
-  devise_for :admins
+  devise_for :admins, :skip => [:registrations]
   devise_for :members
 
   root 'site/home#index'

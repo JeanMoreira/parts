@@ -1,6 +1,6 @@
 class CategoriesController < BackofficeController
 
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_category, only: [:edit, :update, :destroy]
 
   # GET /categories
   # GET /categories.json
@@ -25,11 +25,11 @@ class CategoriesController < BackofficeController
   # POST /categories
   # POST /categories.json
   def create
-    @category = Category.new(category_params)
+    @category = CategoryService.create(category_params)
 
     respond_to do |format|
-      if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
+      unless @category.errors.any?
+        format.html { redirect_to categories_path, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class CategoriesController < BackofficeController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to @category, notice: 'Category was successfully updated.' }
+        format.html { redirect_to categories_path, notice: 'Category was successfully updated.' }
         format.json { render :show, status: :ok, location: @category }
       else
         format.html { render :edit }

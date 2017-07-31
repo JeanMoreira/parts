@@ -27,3 +27,7 @@
 # seed
 
   docker-compose run --rm website bundle exec rake db:seed
+
+# Recriar db
+
+docker-compose run --rm website bundle exec rake db:drop db:create db:migrate db:seed
