@@ -27,7 +27,7 @@
                     <tr>
                         <td><%= admin.id %></td>
                         <td><%= admin.email %></td>
-                        <td><%= admin.role_br %></td>
+                        <td><%= admin.role_i18n %></td>
                         <td><%= admin.name %></td>
 
                         <td style="width: 150px">
@@ -37,7 +37,7 @@
                             <% end %>
                             <% if current_admin.id != admin.id %>
                             
-                            <%= link_to backoffice_admin_path(admin), method: :delete, class: "btn btn-danger btn-circle", data:{confirm:"Você deseja realmente excluir  #{admin.email}"} do %>
+                            <%= link_to backoffice_admin_path(admin), method: :delete, class: "btn btn-danger btn-circle", data:{confirm: t('messages.confirm_with', item: admin.name)} do %>
                             <i class="fa fa-minus"></i>
                             <% end %>
 
