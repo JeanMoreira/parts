@@ -7,26 +7,31 @@
                 </div>
                 <div class="panel-body">
                     <%= form_for(resource, as: resource_name, url: session_path(resource_name, role:"form")) do |f| %>
-                        <fieldset>
-                            <div class="form-group">
-                                <%= f.email_field :email, autofocus: true, class:"form-control" ,placeholder:"E-mail",  type:"email" %>
-                            </div>
-                            <div class="form-group">
-                                
-                                <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Password", type:"password"  %>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <%= f.check_box :remember_me %>Remember me
-                                </label>
-                            </div>
-                                                        
-                            <%= f.submit "Log in", class:"btn btn-lg btn-success btn-block" %>
-                        </fieldset>
-                        <%= render "admins/shared/links" %>
+                    <fieldset>
+                        <div class="form-group">
+                            <%= f.email_field :email, autofocus: true, class:"form-control" ,placeholder:"E-mail",  type:"email" %>
+                        </div>
+                        <div class="form-group">
+
+                            <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Password", type:"password"  %>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <%= f.check_box :remember_me %>Remember me
+                            </label>
+                        </div>
+
+                        <%= f.submit "Log in", class:"btn btn-lg btn-success btn-block" %>
+                    </fieldset>
+                    <%= render "admins/shared/links" %>
                     <% end %>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<% flash.each do |key, value| %>
+    <script type="text/javascript">
+        $.notify("<%= value %>", "info");  
+    </script>                
+<% end %>
