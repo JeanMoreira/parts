@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
     resources :admins, except: [:show]
     get 'admins/index'
+    resources :send_mail, except: [:show]
   end
   resources :parts
   resources :categories, except:[:show]

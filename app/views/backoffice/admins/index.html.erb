@@ -33,11 +33,13 @@
                         <td><%= admin.name %></td>
 
                         <td style="width: 150px">
-
+                            <%= link_to edit_backoffice_send_mail_path(admin), class: "btn btn-info btn-circle", remote: true do %>
+                                    <i class="fa fa-envelope"></i>
+                            <% end %>
                             <%= link_to edit_backoffice_admin_path(admin), class: "btn btn-primary btn-circle" do %>
                             <i class="fa fa-edit"></i>
                             <% end %>
-                            <% if current_admin.id != admin.id %>
+                            <% if (current_admin.id != admin.id) && policy(admin).destroy? %>
                             
                             <%= link_to backoffice_admin_path(admin), method: :delete, class: "btn btn-danger btn-circle", data:{confirm: t('messages.confirm_with', item: admin.name)} do %>
                             <i class="fa fa-minus"></i>
@@ -59,4 +61,6 @@
     </div>
     <!-- /.panel-body -->
 </div>
+
+<%= render partial: 'backoffice/admins/shared/send_mail_modal' %>
 

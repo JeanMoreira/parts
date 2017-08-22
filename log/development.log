@@ -158,3 +158,2221 @@ Processing by Backoffice::AdminsController#index as HTML
 Completed 200 OK in 589ms (Views: 562.9ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for 172.18.0.1 at 2017-08-02 20:01:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (28.3ms)
+Started GET "/" for 172.18.0.1 at 2017-08-02 20:01:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (3.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (9.5ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.9ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 2025ms (Views: 1994.7ms | ActiveRecord: 3.0ms)
+
+
+  Rendered layouts/site_shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 3235ms (Views: 3180.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-02 20:02:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 986ms (Views: 901.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-08-02 20:02:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (6.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.3ms)
+Completed 200 OK in 584ms (Views: 559.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-02 20:02:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (758.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 1328ms (Views: 1272.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-09 13:21:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (6.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (46.3ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.6ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 6674ms (Views: 6587.9ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 13:21:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 26ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-09 13:21:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (1.8ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (77.3ms)
+Completed 200 OK in 1019ms (Views: 984.2ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-09 13:22:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGFzPZUk9HLgV2gHTJqj1w1IxC/FXP0W7ZH9v9a2h++NygYniO+de//dYhNP2v3SGYFvPd7UB+PLOUmdXKE1nA==", "admin"=>{"email"=>"jean-moreira@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (7.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "jean-moreira@live.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.4ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-09 13:22:02.247241"], ["last_sign_in_at", "2017-08-02 14:35:21.843572"], ["sign_in_count", 3], ["updated_at", "2017-08-09 13:22:02.250638"], ["id", 3]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 375ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 13:22:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (2.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 662ms (Views: 633.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 13:39:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/parts/app/controllers/backoffice/admins_helper.rb:6: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/controllers/backoffice/admins_helper.rb:6: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/backoffice_controller.rb:1:in `<top (required)>'
+app/controllers/backoffice/admins_controller.rb:1:in `<top (required)>'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.4ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 13:40:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (8.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 728ms (Views: 604.9ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/backoffice/admins/3/edit" for 172.18.0.1 at 2017-08-09 13:40:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (68.4ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (90.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 824ms (Views: 780.5ms | ActiveRecord: 7.4ms)
+
+
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 13:40:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ilRbu4r9VcWEWrBtDc/Ob4BQ9ujzzKWAvB2QPS+5QzLuw0hKeBnzIbZk9+m4QhXcf2njlnhNiAKgGvl1cPVshg==", "admin"=>{"email"=>"jean-moreira@live.com", "name"=>"Jean Philippe Moreira", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (3.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "admins" SET "role" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["role", 0], ["updated_at", "2017-08-09 13:40:21.025862"], ["id", 3]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 27ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 13:40:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (2.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 737ms (Views: 708.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/backoffice/admins/5/edit" for 172.18.0.1 at 2017-08-09 13:41:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (7.2ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (27.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 714ms (Views: 687.9ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/backoffice/admins/5" for 172.18.0.1 at 2017-08-09 13:41:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YwvxyTmEH66zGR/Z6FfhjAKzZapnbD43B7lCG1n1wC5Gzw21gK2mojyI/vSLIQ1zzPY6CIcnXrAGYxAMiv4tA==", "admin"=>{"email"=>"jean@live.com", "name"=>"Jean Philippe Moreira", "role"=>"restricted_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "admins" SET "role" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["role", 1], ["updated_at", "2017-08-09 13:41:46.166399"], ["id", 5]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 25ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 13:41:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 617ms (Views: 594.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/backoffice/admins/3/edit" for 172.18.0.1 at 2017-08-09 13:52:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (8.8ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (29.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 789ms (Views: 717.3ms | ActiveRecord: 3.2ms)
+
+
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 13:52:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1OTym0IiUuLs90PD3JNXXeVhssbsphuUmdj/lAji/0Owc+FqsMb0Bt7JBEdpHozuGlinuGcnNhaF35bcV67Q9w==", "admin"=>{"email"=>"jean-moreira@live.com", "name"=>"Jean Philippe Moreira", "role"=>"restricted_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/parts/app/policies/admin_policy.rb:11: syntax error, unexpected ':', expecting ']'
+      [:email,:name :password, :password_confirmation]
+                     ^
+/parts/app/policies/admin_policy.rb:11: syntax error, unexpected ']', expecting &. or :: or '[' or '.'
+/parts/app/policies/admin_policy.rb:15: class definition in method body
+/parts/app/policies/admin_policy.rb:25: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/policies/admin_policy.rb:11: syntax error, unexpected ':', expecting ']'
+app/policies/admin_policy.rb:11: syntax error, unexpected ']', expecting &. or :: or '[' or '.'
+app/policies/admin_policy.rb:15: class definition in method body
+app/policies/admin_policy.rb:25: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/backoffice/admins_controller.rb:70:in `params_admin'
+app/controllers/backoffice/admins_controller.rb:41:in `update'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.4ms)
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 13:52:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1OTym0IiUuLs90PD3JNXXeVhssbsphuUmdj/lAji/0Owc+FqsMb0Bt7JBEdpHozuGlinuGcnNhaF35bcV67Q9w==", "admin"=>{"email"=>"jean-moreira@live.com", "name"=>"Jean Philippe Moreira", "role"=>"restricted_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `full_access' for #<Admin:0x007f3b11c31fb0>
+Did you mean?  full_access!
+               full_access?):
+  
+app/policies/admin_policy.rb:8:in `permitted_attributes'
+app/controllers/backoffice/admins_controller.rb:70:in `params_admin'
+app/controllers/backoffice/admins_controller.rb:41:in `update'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+Started GET "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 13:53:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/backoffice/admins/3"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [82 times] (36.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.0ms)
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 13:53:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1OTym0IiUuLs90PD3JNXXeVhssbsphuUmdj/lAji/0Owc+FqsMb0Bt7JBEdpHozuGlinuGcnNhaF35bcV67Q9w==", "admin"=>{"email"=>"jean-moreira@live.com", "name"=>"Jean Philippe Moreira", "role"=>"restricted_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "admins" SET "role" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["role", 1], ["updated_at", "2017-08-09 13:53:18.103877"], ["id", 3]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 84ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 13:53:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.3ms)
+Completed 200 OK in 549ms (Views: 522.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/backoffice/admins/3/edit" for 172.18.0.1 at 2017-08-09 13:53:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (5.9ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (22.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 532ms (Views: 508.4ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 13:53:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K9nRh5e2BX7HYkM+PxJ4PoiXUl8iSYZ5Bf/v890BUaZPTsJ2ZVKjmvVcBLqKn6ONd65HIanIq/sZ+Ia7gk1+Eg==", "admin"=>{"email"=>"jean-moreira@live.com", "name"=>"Jean Philippe Moreira", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+Unpermitted parameter: role
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 27ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 13:53:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (9.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 635ms (Views: 612.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/backoffice/admins/3/edit" for 172.18.0.1 at 2017-08-09 13:53:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (5.8ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (24.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.1ms)
+Completed 200 OK in 629ms (Views: 606.2ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 13:53:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wEJE/ubhudF1359dxTXYsbafdhVKHbiWyx0Xb7wgkO2k1VcPFAUfNUfh2NlwuAMCSaZja8GclRTXGn4n42y/WQ==", "admin"=>{"email"=>"jean-moreira@live.com2", "name"=>"Jean Philippe Moreira", "role"=>"restricted_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (3.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+Unpermitted parameter: role
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 AND ("admins"."id" != $2) LIMIT $3[0m  [["email", "jean-moreira@live.com2"], ["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (4.4ms)[0m  [1m[33mUPDATE "admins" SET "email" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["email", "jean-moreira@live.com2"], ["updated_at", "2017-08-09 13:53:36.240128"], ["id", 3]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 116ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 13:53:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (6.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 623ms (Views: 600.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/backoffice/admins/3/edit" for 172.18.0.1 at 2017-08-09 13:53:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (5.6ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (22.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.0ms)
+Completed 200 OK in 625ms (Views: 604.1ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 13:53:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxmsVEzmRtqRGP46SPvDkyk0tjZ0tBQWxFR3uWmu+gwrjr+lvgLgPqMmub79dhgg1g2jSP81OZTYUx7xNuLVuA==", "admin"=>{"email"=>"jean-moreira@live.com", "name"=>"Jean Philippe Moreira", "role"=>"restricted_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+Unpermitted parameter: role
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 AND ("admins"."id" != $2) LIMIT $3[0m  [["email", "jean-moreira@live.com"], ["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "admins" SET "email" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["email", "jean-moreira@live.com"], ["updated_at", "2017-08-09 13:53:43.534626"], ["id", 3]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 40ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 13:53:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.3ms)
+Completed 200 OK in 670ms (Views: 635.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/backoffice/admins/4/edit" for 172.18.0.1 at 2017-08-09 13:58:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (2.1ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (22.9ms)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 2.1ms)
+
+
+  
+SyntaxError (/parts/app/views/backoffice/admins/shared/_form.html.erb:32: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...end=( if policy(@admin).edit? );@output_buffer.safe_append='
+...                               ^
+/parts/app/views/backoffice/admins/shared/_form.html.erb:43: syntax error, unexpected keyword_end
+  '.freeze;@output_buffer.append=( end );@output_buffer.safe_append='
+                                      ^
+/parts/app/views/backoffice/admins/shared/_form.html.erb:59: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/parts/app/views/backoffice/admins/shared/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting ')'
+/parts/app/views/backoffice/admins/shared/_form.html.erb:66: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/backoffice/admins/shared/_form.html.erb:32: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/backoffice/admins/shared/_form.html.erb:43: syntax error, unexpected keyword_end
+app/views/backoffice/admins/shared/_form.html.erb:59: syntax error, unexpected keyword_end, expecting ')'
+app/views/backoffice/admins/shared/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/backoffice/admins/shared/_form.html.erb:66: syntax error, unexpected keyword_end, expecting ')'
+app/views/backoffice/admins/edit.html.erb:1:in `_app_views_backoffice_admins_edit_html_erb__3314385982204324312_69945793006440'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.9ms)
+Started GET "/backoffice/admins/4/edit" for 172.18.0.1 at 2017-08-09 14:00:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (31.1ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (46.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 723ms (Views: 662.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 14:00:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (2.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.7ms)
+Completed 200 OK in 793ms (Views: 761.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/backoffice/admins/3/edit" for 172.18.0.1 at 2017-08-09 14:00:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (6.7ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (26.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 648ms (Views: 622.7ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 14:00:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DAs716SqbFUBW2Z0JXLTIHjLieUwnQfa9XvcP/vg13RonCgmVk7KsTNlIfCQ/wiTh/Kcm7scKljpfLV3pKz4wA==", "admin"=>{"email"=>"jean-moreira@live.com1", "name"=>"Jean Philippe Moreira", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (2.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 AND ("admins"."id" != $2) LIMIT $3[0m  [["email", "jean-moreira@live.com1"], ["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "admins" SET "email" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["email", "jean-moreira@live.com1"], ["updated_at", "2017-08-09 14:00:15.957379"], ["id", 3]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 37ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 14:00:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (6.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 622ms (Views: 592.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/backoffice/admins/3/edit" for 172.18.0.1 at 2017-08-09 14:00:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (7.1ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (26.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 637ms (Views: 611.0ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/backoffice/admins/3" for 172.18.0.1 at 2017-08-09 14:00:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qirP4KZ3DmJDVIikA3nzwI2Oi45YYe6oteRyPqQvHkfOvdwRVJOohnFqzyC29Chzcree8NPgwyqp4xt2+2Mx8w==", "admin"=>{"email"=>"jean-moreira@live.com", "name"=>"Jean Philippe Moreira", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:68)
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 AND ("admins"."id" != $2) LIMIT $3[0m  [["email", "jean-moreira@live.com"], ["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "admins" SET "email" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["email", "jean-moreira@live.com"], ["updated_at", "2017-08-09 14:00:21.995960"], ["id", 3]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 44ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 14:00:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.9ms)
+Completed 200 OK in 650ms (Views: 596.7ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/admins/sign_out" for 172.18.0.1 at 2017-08-09 14:00:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dIWZD51C/Ah1biovcKKtTKwJJGEG52xTSXBYYyAteI8QEor+b6Za7EdQbavFL3b/UzAxH41mQdFVdzErf2FXOw=="}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-09 14:00:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (24.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.8ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 460ms (Views: 374.9ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 14:00:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-09 14:00:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (2.1ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (23.2ms)
+Completed 200 OK in 664ms (Views: 661.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-09 14:00:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QWjCiELNr8SE3wktP5G1ocilujGXnHJXkIkn04BgX9jz5+qx20+ZOijaJ0+FWCDKMaVoepk+qtDFK/0RdjakKw==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-09 14:00:39.913908"], ["last_sign_in_at", "2017-08-02 19:22:41.701915"], ["sign_in_count", 5], ["updated_at", "2017-08-09 14:00:39.917356"], ["id", 1]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 240ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 14:00:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 727ms (Views: 677.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 14:00:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 710ms (Views: 667.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/backoffice/admins/3/edit" for 172.18.0.1 at 2017-08-09 14:00:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (6.0ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (26.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.7ms)
+Completed 200 OK in 757ms (Views: 725.2ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/admins/sign_out" for 172.18.0.1 at 2017-08-09 14:02:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UajaglinemZPjzkebUyi4pqQlieoRtI7diM9u41huH2eXOryO5x184elOyV/tHvWv/o0OSIRNepetcW8rE2f4w=="}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-09 14:02:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (3.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.8ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 272ms (Views: 255.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-09 14:11:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (13.3ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.7ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 436ms (Views: 370.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 14:11:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 20ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-09 14:11:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (3.7ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (30.9ms)
+Completed 200 OK in 763ms (Views: 723.6ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-09 14:11:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Maf4y7sujLAu2AHX1mZXcMA8wRMM1gd4olef2euMYHX9AmnfHX/nHfWzrFU6UosunmMYkdgxDjw0hQR7AJKCvg==", "admin"=>{"email"=>"jean-moreira@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "jean-moreira@live.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-09 14:11:43.108135"], ["last_sign_in_at", "2017-08-09 13:22:02.247241"], ["sign_in_count", 4], ["updated_at", "2017-08-09 14:11:43.111630"], ["id", 3]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 288ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 14:11:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 719ms (Views: 689.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 14:11:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (1.8ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/parts/app/views/backoffice/admins/index.html.erb:40: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...nt_admin.id != admin.id) policy(admin).destroy? 
+...                               ^
+/parts/app/views/backoffice/admins/index.html.erb:46: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze;                             else 
+                                          ^
+/parts/app/views/backoffice/admins/index.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/backoffice/admins/index.html.erb:40: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+app/views/backoffice/admins/index.html.erb:46: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/backoffice/admins/index.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.2ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 14:11:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (6.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.3ms)
+Completed 200 OK in 701ms (Views: 672.0ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/admins/sign_out" for 172.18.0.1 at 2017-08-09 14:12:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LvesOyWgqFUbGXoqzsVEffCIE13pwyRqeVQ/dYEK7EhAFQ/sQ5YgSOXd4tda3n5uKtNOhA8DH+xj2dOPm4Gowg=="}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-09 14:12:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (4.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 388ms (Views: 371.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-09 14:12:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (2.1ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (23.2ms)
+Completed 200 OK in 679ms (Views: 676.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-09 14:12:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wktUF+OZT9Kj2RL9AFFyT9f5g9lqP690cFZxr9MYODecHYYgWQZZgpw7KVT2AMey4hGUGSFtTlVkgBH/OsWR2w==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-09 14:12:14.705318"], ["last_sign_in_at", "2017-08-09 14:00:39.913908"], ["sign_in_count", 6], ["updated_at", "2017-08-09 14:12:14.708396"], ["id", 1]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 251ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-09 14:12:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (4.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.3ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 372ms (Views: 350.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 14:12:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 616ms (Views: 594.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 14:12:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (8.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 565ms (Views: 542.9ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/admins/sign_out" for 172.18.0.1 at 2017-08-09 14:12:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VFdCj81ka9xmJWR7Yrv+WkuVM09chqOrHl+Q0oJjN/mcvxIrgGAtaoPkchmnScf4qB2nrL7ZZL3vbn1tk3I6mg=="}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-09 14:12:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (3.7ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 333ms (Views: 315.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-09 14:12:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (2.6ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (23.6ms)
+Completed 200 OK in 615ms (Views: 613.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 14:12:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-09 14:12:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (2.1ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (57.4ms)
+Completed 200 OK in 671ms (Views: 665.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-09 14:12:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"emrdOrur7aUTD5Tu12xPbCgqG9dEAfd5Z4F8gs4i+/wnMT/lBOUr/437NzswdhcdEeAj5Twdl38vSYaYGZ/OQQ==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-09 14:12:45.985700"], ["last_sign_in_at", "2017-08-09 14:12:14.705318"], ["sign_in_count", 7], ["updated_at", "2017-08-09 14:12:45.988989"], ["id", 1]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 255ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 14:12:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (2.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 654ms (Views: 616.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 14:29:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (9.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 733ms (Views: 626.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/backoffice/admins/1/edit" for 172.18.0.1 at 2017-08-09 14:29:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (7.1ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (26.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 692ms (Views: 664.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 14:29:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (10.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 837ms (Views: 810.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/backoffice/admins/4/edit" for 172.18.0.1 at 2017-08-09 14:29:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (6.8ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (26.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 659ms (Views: 630.0ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/backoffice/admins/4" for 172.18.0.1 at 2017-08-09 14:29:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z7gsEh5Liw55sFJF/JCNE+53ItkZRvYac50aOdT03+GKOWOld9MrK3SvMBH7DWG/nTbjfHwLLrtoj9LJ2sLJVg==", "admin"=>{"email"=>"jeanseilor@gmail.com", "name"=>"Philippe", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:69)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "admins" SET "role" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["role", 0], ["updated_at", "2017-08-09 14:29:37.252924"], ["id", 4]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 35ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 14:29:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 648ms (Views: 625.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rails/mailers/admin_mailer" for 172.18.0.1 at 2017-08-09 14:36:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer"}
+  Rendering /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 1304ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:36:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `fist' for #<Class:0x007f3b1c35a968>
+Did you mean?  first):
+  
+test/mailers/previews/admin_mailer_preview.rb:4:in `update_email'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.0ms)
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:36:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+Completed 404 Not Found in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::ActionNotFound (Email 'update_email' not found in AdminMailerPreview):
+  
+railties (5.0.4) lib/rails/mailers_controller.rb:38:in `preview'
+actionpack (5.0.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.4) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.4) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.4) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.4) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.4) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.4) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.4) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.4) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.2ms)
+Started GET "/rails/mailers/admin_mailer" for 172.18.0.1 at 2017-08-09 14:38:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer"}
+  Rendering /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:38:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `fist' for #<Class:0x007f3b1c4614b0>
+Did you mean?  first):
+  
+test/mailers/previews/admin_mailer_preview.rb:4:in `update_email'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:38:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+AdminMailer#update_email: processed outbound mail in 186.1ms
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::MissingTemplate (Missing template admin_mailer/update_email with "mailer". Searched in:
+  * "admin_mailer"
+):
+  
+app/mailers/admin_mailer.rb:7:in `update_email'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (29.3ms)
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:40:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.9ms)
+AdminMailer#update_email: processed outbound mail in 709.0ms
+  Rendering /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/email.html.erb (19.9ms)
+Completed 200 OK in 741ms (Views: 23.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email?part=text%2Fhtml" for 172.18.0.1 at 2017-08-09 14:40:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (1.0ms)
+AdminMailer#update_email: processed outbound mail in 159.1ms
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 182ms (Views: 9.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:40:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.7ms)
+AdminMailer#update_email: processed outbound mail in 166.8ms
+  Rendering /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/email.html.erb (2.9ms)
+Completed 200 OK in 181ms (Views: 5.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email?part=text%2Fhtml" for 172.18.0.1 at 2017-08-09 14:40:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.9ms)
+AdminMailer#update_email: processed outbound mail in 166.7ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 179ms (Views: 1.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:41:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (1.3ms)
+AdminMailer#update_email: processed outbound mail in 186.0ms
+  Rendering /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/email.html.erb (4.2ms)
+Completed 200 OK in 203ms (Views: 7.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email?part=text%2Fhtml" for 172.18.0.1 at 2017-08-09 14:41:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (2.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (1.0ms)
+AdminMailer#update_email: processed outbound mail in 265.1ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 280ms (Views: 1.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:42:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (1.1ms)
+AdminMailer#update_email: processed outbound mail in 149.1ms
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (/parts/app/views/admin_mailer/update_email.html.erb:2: syntax error, unexpected unary-, expecting ')'
+...pend=( -- @current_admin.name -- .);@output_buffer.safe_appe...
+...                               ^
+/parts/app/views/admin_mailer/update_email.html.erb:3: syntax error, unexpected keyword_ensure, expecting ')'
+/parts/app/views/admin_mailer/update_email.html.erb:5: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/admin_mailer/update_email.html.erb:2: syntax error, unexpected unary-, expecting ')'
+app/views/admin_mailer/update_email.html.erb:3: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/admin_mailer/update_email.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+app/mailers/admin_mailer.rb:7:in `update_email'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.4ms)
+Started GET "/rails/mailers/admin_mailer/update_email" for 172.18.0.1 at 2017-08-09 14:42:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.8ms)
+AdminMailer#update_email: processed outbound mail in 133.1ms
+  Rendering /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /box/gems/railties-5.0.4/lib/rails/templates/rails/mailers/email.html.erb (4.6ms)
+Completed 200 OK in 149ms (Views: 7.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email?part=text%2Fhtml" for 172.18.0.1 at 2017-08-09 14:42:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.9ms)
+AdminMailer#update_email: processed outbound mail in 250.8ms
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 261ms (Views: 1.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 14:46:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (9.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 843ms (Views: 727.0ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/backoffice/admins/4/edit" for 172.18.0.1 at 2017-08-09 14:46:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (6.3ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (27.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 652ms (Views: 623.0ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/backoffice/admins/4" for 172.18.0.1 at 2017-08-09 14:46:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+NcEJ/1OPqVS/DX8irgv3euHCrr7FZkEPhbrDC9JkbC9VkuQlNaegF/jV6iNJcNxmMbLH55YQaUlBCP8IX+HBw==", "admin"=>{"email"=>"jeanseilor@gmail.com", "name"=>"Philippe", "role"=>"restricted_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:70)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "admins" SET "role" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["role", 1], ["updated_at", "2017-08-09 14:46:56.312795"], ["id", 4]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (1.3ms)
+AdminMailer#update_email: processed outbound mail in 252.2ms
+Sent mail to jeanseilor@gmail.com (45.8ms)
+Date: Wed, 09 Aug 2017 14:46:56 +0000
+From: noreply@parts.com.br
+To: jeanseilor@gmail.com
+Message-ID: <598b2060a3bb2_336c13eec7419331@a08e1882214d.mail>
+Subject: Seus dados foram alterados
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1> Philippe</h1>
+<p>Seus dados foram atualizados por <b>admin</b></p>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 405ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 14:46:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 624ms (Views: 599.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/backoffice/admins/4/edit" for 172.18.0.1 at 2017-08-09 14:50:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (6.3ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (26.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 764ms (Views: 736.3ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/backoffice/admins/4" for 172.18.0.1 at 2017-08-09 14:50:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dhWrAoaJfjszGh0b2m5/8cwoLXiAMHDUjhC4sSgcrzszlOS17xHeHj4Ff0/d85Ndv2ns3eV9qHWVAnBBJiq5jA==", "admin"=>{"email"=>"jeanseilor@gmail.com", "name"=>"Philippe", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:70)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "admins" SET "role" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["role", 0], ["updated_at", "2017-08-09 14:50:38.278279"], ["id", 4]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.8ms)
+AdminMailer#update_email: processed outbound mail in 137.0ms
+Sent mail to jeanseilor@gmail.com (5.0ms)
+Date: Wed, 09 Aug 2017 14:50:38 +0000
+From: noreply@parts.com.br
+To: jeanseilor@gmail.com
+Message-ID: <598b213e6858b_336c13ee36419473@a08e1882214d.mail>
+Subject: Seus dados foram alterados
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1> Philippe</h1>
+<p>Seus dados foram atualizados por <b>admin</b></p>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 165ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 14:50:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (9.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 713ms (Views: 680.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/backoffice/admins/1/edit" for 172.18.0.1 at 2017-08-09 14:51:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (5.5ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (24.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 728ms (Views: 699.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/backoffice/admins/4/edit" for 172.18.0.1 at 2017-08-09 14:51:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (5.8ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (23.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.6ms)
+Completed 200 OK in 857ms (Views: 825.3ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/backoffice/admins/4" for 172.18.0.1 at 2017-08-09 14:51:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wGjGcLoA0F03LEupvDAnN4C/qOpA+qq9Jj/RtOXNIkmF6YnH05hweDozKf27rcub8/5pTyW3chw9LRlE6/s0/g==", "admin"=>{"email"=>"jeanseilor@gmail.com", "name"=>"Philippe", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+DEPRECATION WARNING: Method except! is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.4/classes/ActionController/Parameters.html (called from params_admin at /parts/app/controllers/backoffice/admins_controller.rb:70)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (1.1ms)
+AdminMailer#update_email: processed outbound mail in 163.6ms
+Sent mail to jeanseilor@gmail.com (5.9ms)
+Date: Wed, 09 Aug 2017 14:51:24 +0000
+From: noreply@parts.com.br
+To: jeanseilor@gmail.com
+Message-ID: <598b216cefa1b_336c13eec74195a1@a08e1882214d.mail>
+Subject: Seus dados foram alterados
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1> Philippe</h1>
+<p>Seus dados foram atualizados por <b>admin</b></p>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 189ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 14:51:25 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (11.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 712ms (Views: 672.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-09 16:53:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (113.8ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_backoffice_send_mail_path' for #<#<Class:0x007f3b11bf5010>:0x007f3b1d753758>
+Did you mean?  edit_backoffice_admin_path):
+    33:                         <td><%= admin.name %></td>
+    34: 
+    35:                         <td style="width: 150px">
+    36:                             <%= link_to edit_backoffice_send_mail_path(admin), class: "btn btn-info btn-circle", remote: true do %>
+    37:                                     <i class="fa fa-envelope"></i>
+    38:                                 <% end %>
+    39:                             <%= link_to edit_backoffice_admin_path(admin), class: "btn btn-primary btn-circle" do %>
+  
+app/views/backoffice/admins/index.html.erb:36:in `block in _app_views_backoffice_admins_index_html_erb___37985686197742522_69945841148620'
+app/views/backoffice/admins/index.html.erb:28:in `_app_views_backoffice_admins_index_html_erb___37985686197742522_69945841148620'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.8ms)
+Started GET "/ro" for 172.18.0.1 at 2017-08-09 16:53:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/ro"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [82 times] (37.9ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (74.8ms)
+Started GET "/rails/info/routes?path=email" for 172.18.0.1 at 2017-08-09 16:53:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"email", "internal"=>true}
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ro" for 172.18.0.1 at 2017-08-09 16:55:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/ro"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [82 times] (47.0ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.8ms)
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 16:55:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.4ms)
+Completed 200 OK in 696ms (Views: 654.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 16:55:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (183.5ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (213.2ms)
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `backoffice_send_mail_index_path' for #<#<Class:0x007f3b11bf5010>:0x007f3b1d816640>
+Did you mean?  backoffice_admins_index_path):
+     6:         <h4 class="modal-title" id="exampleModalLabel"><%= t('labels.new_message') %></h4>
+     7:       </div>
+     8:       <div class="modal-body">
+     9:         <%= form_tag(backoffice_send_mail_index_path, remote: true) do %>
+    10:           <div class="form-group">
+    11:             <label for="recipient-text" class="control-label"><%= t('labels.recipient') %></label>
+    12:             <%= text_field_tag(:'recipient-text', nil, class: "form-control", readonly: "readonly") %>
+  
+app/views/backoffice/admins/shared/_send_mail_modal.html.erb:9:in `_app_views_backoffice_admins_shared__send_mail_modal_html_erb___2134092381082431581_69945936778620'
+app/views/backoffice/admins/index.html.erb:65:in `_app_views_backoffice_admins_index_html_erb___37985686197742522_69945937410200'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.3ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 16:57:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 709ms (Views: 686.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 17:15:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ArgumentError ('backoffice/sendMail' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:15:in `block (2 levels) in <top (required)>'
+config/routes.rb:11:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.7ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-09 17:16:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 805ms (Views: 721.8ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 17:16:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (122.7ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_backoffice_send_mail_path' for #<#<Class:0x007f3b1e2d13a0>:0x007f3b1e2cbe78>
+Did you mean?  edit_backoffice_admin_path):
+    33:                         <td><%= admin.name %></td>
+    34: 
+    35:                         <td style="width: 150px">
+    36:                             <%= link_to edit_backoffice_send_mail_path(admin), class: "btn btn-info btn-circle", remote: true do %>
+    37:                                     <i class="fa fa-envelope"></i>
+    38:                             <% end %>
+    39:                             <%= link_to edit_backoffice_admin_path(admin), class: "btn btn-primary btn-circle" do %>
+  
+app/views/backoffice/admins/index.html.erb:36:in `block in _app_views_backoffice_admins_index_html_erb___37985686197742522_69945943035580'
+app/views/backoffice/admins/index.html.erb:28:in `_app_views_backoffice_admins_index_html_erb___37985686197742522_69945943035580'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.1ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 17:18:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.6ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (31.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (24.9ms)
+Completed 200 OK in 749ms (Views: 645.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/backoffice/send_mail/5/edit" for 172.18.0.1 at 2017-08-09 17:18:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for Backoffice::SendMailController):
+  
+actionpack (5.0.4) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.4) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.text.erb (0.8ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 17:26:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.2ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (30.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 715ms (Views: 613.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/backoffice/send_mail/5/edit" for 172.18.0.1 at 2017-08-09 17:26:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"5"}
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (16.3ms)
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    2:   let $sendMailModal = $('#sendMailModal');
+    3: 
+    4:   // Setting email and name on Form
+    5:   $('#recipient-text').val('<%= @admin.email %>');
+    6:   $('h4.modal-title').text("<%= I18n.t('labels.send_message_to', name: @admin.name) %>");
+    7: 
+    8:   // Shows Modal
+  
+app/views/backoffice/send_mail/edit.js.erb:5:in `_app_views_backoffice_send_mail_edit_js_erb___3558417942010944498_69945942925340'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.7ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (15.6ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 17:33:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.5ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (30.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 775ms (Views: 685.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/backoffice/send_mail/5/edit" for 172.18.0.1 at 2017-08-09 17:33:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.4ms)
+Completed 200 OK in 230ms (Views: 194.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 17:55:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (3.0ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (30.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.9ms)
+Completed 200 OK in 837ms (Views: 807.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 172.18.0.1 at 2017-08-09 17:55:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.2ms)
+Completed 200 OK in 223ms (Views: 192.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/backoffice/send_mail/5/edit" for 172.18.0.1 at 2017-08-09 18:08:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.6ms)
+Completed 200 OK in 277ms (Views: 223.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 18:43:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (3.8ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (47.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 968ms (Views: 814.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/backoffice/send_mail/5/edit" for 172.18.0.1 at 2017-08-09 18:43:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.8ms)
+Completed 200 OK in 248ms (Views: 208.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:43:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"jean@live.com", "subject-text"=>"teste", "message-text"=>"testes"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 2.9ms
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `-' for nil:NilClass):
+  
+app/mailers/admin_mailer.rb:14:in `send_message'
+app/controllers/backoffice/send_mail_controller.rb:16:in `create'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.1ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (24.7ms)
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:44:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"jean@live.com", "subject-text"=>"teste", "message-text"=>"testes"}
+  [1m[36mAdmin Load (3.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 2.9ms
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.7ms)
+
+
+  
+NoMethodError (undefined method `-' for nil:NilClass):
+  
+app/mailers/admin_mailer.rb:14:in `send_message'
+app/controllers/backoffice/send_mail_controller.rb:16:in `create'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (21.7ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 18:45:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.4ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (37.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 926ms (Views: 823.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 172.18.0.1 at 2017-08-09 18:45:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.3ms)
+Completed 200 OK in 237ms (Views: 206.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:45:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"jean-moreira@live.com", "subject-text"=>"123123", "message-text"=>"123123123"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 1.4ms
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `-' for nil:NilClass):
+  
+app/mailers/admin_mailer.rb:14:in `send_message'
+app/controllers/backoffice/send_mail_controller.rb:16:in `create'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (22.6ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 18:46:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.3ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (29.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 664ms (Views: 629.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/backoffice/send_mail/1/edit" for 172.18.0.1 at 2017-08-09 18:46:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (2.0ms)
+Completed 200 OK in 259ms (Views: 228.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:46:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"admin@admin.com", "subject-text"=>"1231", "message-text"=>"123123"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 3.2ms
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `-' for nil:NilClass):
+  
+app/mailers/admin_mailer.rb:14:in `send_message'
+app/controllers/backoffice/send_mail_controller.rb:16:in `create'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.7ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.3ms)
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:46:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"admin@admin.com", "subject-text"=>"1231", "message-text"=>"123123"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 2.8ms
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `-' for nil:NilClass):
+  
+app/mailers/admin_mailer.rb:14:in `send_message'
+app/controllers/backoffice/send_mail_controller.rb:16:in `create'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.1ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (20.9ms)
+Started GET "/backoffice/send_mail/3/edit" for 172.18.0.1 at 2017-08-09 18:48:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.4ms)
+Completed 200 OK in 207ms (Views: 179.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:48:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"jean-moreira@live.com", "subject-text"=>"1231", "message-text"=>"123123"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 2.3ms
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `-' for nil:NilClass):
+  
+app/mailers/admin_mailer.rb:14:in `send_message'
+app/controllers/backoffice/send_mail_controller.rb:16:in `create'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (24.0ms)
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-09 18:50:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.6ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (27.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 727ms (Views: 636.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 172.18.0.1 at 2017-08-09 18:50:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.5ms)
+Completed 200 OK in 238ms (Views: 207.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:50:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"jean-moreira@live.com", "subject-text"=>"teste", "message-text"=>"testes"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 1.7ms
+  Rendering backoffice/send_mail/create.js.erb
+  Rendered backoffice/send_mail/create.js.erb (1.1ms)
+Completed 200 OK in 408ms (Views: 243.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/backoffice/send_mail/4/edit" for 172.18.0.1 at 2017-08-09 18:51:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.8ms)
+Completed 200 OK in 207ms (Views: 181.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:51:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"jeanseilor@gmail.com", "subject-text"=>"testes", "message-text"=>"testestes"}
+  [1m[36mAdmin Load (2.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 3.8ms
+  Rendering backoffice/send_mail/create.js.erb
+  Rendered backoffice/send_mail/create.js.erb (1.3ms)
+Completed 200 OK in 213ms (Views: 163.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/backoffice/send_mail/1/edit" for 172.18.0.1 at 2017-08-09 18:51:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.4ms)
+Completed 200 OK in 181ms (Views: 158.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/backoffice/send_mail" for 172.18.0.1 at 2017-08-09 18:51:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"admin@admin.com", "subject-text"=>"test", "message-text"=>"testes"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+AdminMailer#send_message: processed outbound mail in 1.9ms
+  Rendering backoffice/send_mail/create.js.erb
+  Rendered backoffice/send_mail/create.js.erb (1.5ms)
+Completed 200 OK in 217ms (Views: 178.8ms | ActiveRecord: 0.8ms)
+
+
