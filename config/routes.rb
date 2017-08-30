@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   end
   resources :parts
   resources :categories, except:[:show]
-  resources :cars
+  resources :cars, except:[:show]
   resources :companies
   resources :phones
   resources :addresses

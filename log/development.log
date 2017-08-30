@@ -2376,3 +2376,1753 @@ AdminMailer#send_message: processed outbound mail in 1.9ms
 Completed 200 OK in 217ms (Views: 178.8ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 172.18.0.1 at 2017-08-22 17:17:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (6.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (41.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.8ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 3087ms (Views: 3000.0ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-22 17:18:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-22 17:18:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (2.4ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (112.5ms)
+Completed 200 OK in 1243ms (Views: 1203.1ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-22 17:18:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DfP/TejnUZN3Q/GNFwcIiaPiAqT+67tlDGirGvWRKoDN1Nz/LEgsjO+Xtgsbq9YHG1qCNUEjiQS9Y4F6wllOdg==", "admin"=>{"email"=>"jean-moreira@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (6.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "jean-moreira@live.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-22 17:18:15.922165"], ["last_sign_in_at", "2017-08-09 14:11:43.108135"], ["sign_in_count", 5], ["updated_at", "2017-08-22 17:18:15.925571"], ["id", 3]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 368ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-22 17:18:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 542ms (Views: 515.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-08-22 17:18:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (4.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 501ms (Views: 479.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-08-22 17:18:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (4.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 545ms (Views: 523.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 17:11:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 75ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-30 17:11:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (2.7ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (102.9ms)
+Completed 200 OK in 3898ms (Views: 3847.5ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-30 17:11:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XVGnxxdEp4PTyI+hjjHIWULyKfpKlnNs5Dvh4JIy10kyENXpdN5yNVZPYjVZD0cc0qx9YjuiBO8IjX1ukJ8Sjg==", "admin"=>{"email"=>"jean-moreira@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (6.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "jean-moreira@live.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-30 17:11:20.550477"], ["last_sign_in_at", "2017-08-22 17:18:15.922165"], ["sign_in_count", 6], ["updated_at", "2017-08-30 17:11:20.553968"], ["id", 3]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 344ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 17:11:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.8ms)
+Completed 200 OK in 586ms (Views: 562.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-30 17:25:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (5.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (44.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.7ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 2524ms (Views: 2441.5ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 17:30:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 1033ms (Views: 962.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-08-30 17:30:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (21.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 878ms (Views: 775.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-30 17:30:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.1ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (952.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 1568ms (Views: 1509.5ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/admins/sign_out" for 172.18.0.1 at 2017-08-30 17:30:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dU0Mau01w0/FkBRbwr//KxPinAoUfxQMCY9PsMIL2JDswi1hH8ups96/iJR47oxy2s1OMAE/Udn6TVUEIq7pyQ=="}
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-30 17:30:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (4.7ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.7ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 294ms (Views: 278.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 17:30:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-30 17:30:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (2.0ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (74.1ms)
+Completed 200 OK in 628ms (Views: 614.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-30 17:30:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ETb5m6xVU88WlMdtEIoVIyw3JoO4tCiZ6y2vmV665drBly6kOEzU4+AdIDkzJ4rfibJJ2gabqyi/dBxxkU8GLw==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (2.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-30 17:30:50.477497"], ["last_sign_in_at", "2017-08-09 14:12:45.985700"], ["sign_in_count", 8], ["updated_at", "2017-08-30 17:30:50.483657"], ["id", 1]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 362ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 17:30:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.6ms)
+Completed 200 OK in 649ms (Views: 624.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-08-30 17:30:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.1ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (24.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 669ms (Views: 642.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/backoffice/admins/new" for 172.18.0.1 at 2017-08-30 17:30:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#new as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/new.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (60.7ms)
+  Rendered backoffice/admins/new.html.erb within layouts/backoffice (85.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 913ms (Views: 885.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/backoffice/admins" for 172.18.0.1 at 2017-08-30 17:31:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U9IWJW4Y+ETICm2RoPts4NCohZvRzE7TGxZtchzDdb1cHpNUqGOCqSwak3k9Wcu3sr3Zq76L05u5rvexFjeIOw==", "admin"=>{"email"=>"jean-moreira@live.com.br1", "name"=>"Jean moreira", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (3.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.6ms)
+
+
+  
+Pundit::NotDefinedError (unable to find policy of nil):
+  
+app/controllers/backoffice/admins_controller.rb:69:in `params_admin'
+app/controllers/backoffice/admins_controller.rb:18:in `create'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.9ms)
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-30 17:33:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.5ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (35.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 981ms (Views: 839.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/backoffice/admins/new" for 172.18.0.1 at 2017-08-30 17:33:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#new as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/new.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (8.7ms)
+  Rendered backoffice/admins/new.html.erb within layouts/backoffice (24.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 614ms (Views: 590.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/backoffice/admins" for 172.18.0.1 at 2017-08-30 17:33:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IGtWs979qOx0JySrZUDlf6sTsCzOycCfJaIjVPnazs0vp9PCGIbSAZA32kP44kIoyQbsHKGOXdeHGrmX8y4zSw==", "admin"=>{"email"=>"alvimar@live.com", "name"=>"alvimar amorin", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "alvimar@live.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "alvimar@live.com"], ["encrypted_password", "$2a$11$f7t0mbkQH2RZrsSH1/GX9.wgc2ySgjixb0cCZ7oDX7J1JEaK1ZNpS"], ["created_at", "2017-08-30 17:33:43.469719"], ["updated_at", "2017-08-30 17:33:43.469719"], ["name", "alvimar amorin"], ["role", 0]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 345ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-30 17:33:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.7ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (79.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 880ms (Views: 846.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/info/routs" for 172.18.0.1 at 2017-08-30 17:42:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/info/routs"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [89 times] (42.6ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.8ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.7ms)
+Started GET "/rails/info/routes?path=car" for 172.18.0.1 at 2017-08-30 17:42:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"car", "internal"=>true}
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/backoffice/admins" for 172.18.0.1 at 2017-08-30 17:42:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.1ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (28.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.5ms)
+Completed 200 OK in 593ms (Views: 568.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 17:42:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (3.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 199ms (Views: 143.3ms | ActiveRecord: 10.8ms)
+
+
+Started DELETE "/admins/sign_out" for 172.18.0.1 at 2017-08-30 17:47:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fGOLgMalGNI/LZ2aXdg04fTBsiAX4lvqaLdqHNeF00Zzrw7xAN5iP9s9Y3LAepO2ltTuEHilxqLKD/Df3XEuwA=="}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-30 17:47:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (28.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.8ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 454ms (Views: 377.3ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 17:47:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-30 17:47:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (1.8ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (21.8ms)
+Completed 200 OK in 548ms (Views: 546.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-08-30 17:49:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (5.0ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 419ms (Views: 398.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 17:49:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 172.18.0.1 at 2017-08-30 17:49:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (2.2ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (20.6ms)
+Completed 200 OK in 568ms (Views: 565.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 172.18.0.1 at 2017-08-30 17:49:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gDEP9WL3InucbDLb54MCXSzOLPJYQcyfUVIjQprDF+8UG1xH6VqXjddQNTIMy92O1fhqjM7/FowP0Y5aZxq8Dw==", "admin"=>{"email"=>"jean-moreira@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "jean-moreira@live.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2017-08-30 17:49:33.214207"], ["last_sign_in_at", "2017-08-30 17:11:20.550477"], ["sign_in_count", 7], ["updated_at", "2017-08-30 17:49:33.219045"], ["id", 3]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 298ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 17:49:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 602ms (Views: 574.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 17:49:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 155ms (Views: 134.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-08-30 18:06:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.3ms)
+Completed 200 OK in 738ms (Views: 714.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:06:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (82.0ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `car' for #<#<Class:0x007fda40385f50>:0x007fda5e2ac0e8>
+Did you mean?  car_url
+               @cars):
+    16:         <thead>
+    17:           <tr>
+    18:             <th>#</th>
+    19:             <td><%= car.model %></td>
+    20:             <td><%= car.maker %></td>
+    21:             <td><%= car.year %></td>
+    22:             <td><%= car.year_make %></td>
+  
+app/views/cars/index.html.erb:19:in `_app_views_cars_index_html_erb___3658011350273312335_70287929730400'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.7ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:08:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/index.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    24:           </tr>
+    25:         </thead>
+    26:         <tbody>
+    27:          <% @categories.each do |category| %>
+    28:          <tr>
+    29:           <td style="width: 40px"><%= category.id %></td>
+    30:           <td><%= car.model  %></td>
+  
+app/views/cars/index.html.erb:27:in `_app_views_cars_index_html_erb___3658011350273312335_70287711943000'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:08:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (73.6ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `car' for #<#<Class:0x007fda40385f50>:0x007fda352a9560>
+Did you mean?  car_url
+               @cars):
+    27:          <% @cars.each do |category| %>
+    28:          <tr>
+    29:           <td style="width: 40px"><%= category.id %></td>
+    30:           <td><%= car.model  %></td>
+    31:           <td><%= car.maker %></td>
+    32:           <td><%= car.year %></td>
+    33:           <td><%= car.year_make %></td>
+  
+app/views/cars/index.html.erb:30:in `block in _app_views_cars_index_html_erb___3658011350273312335_70287585791960'
+app/views/cars/index.html.erb:27:in `_app_views_cars_index_html_erb___3658011350273312335_70287585791960'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:09:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (62.5ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `car' for #<#<Class:0x007fda40385f50>:0x007fda5d4da758>
+Did you mean?  car_url
+               @cars):
+    27:          <% @cars.each do |category| %>
+    28:          <tr>
+    29:           <td style="width: 40px"><%= category.id %></td>
+    30:           <td><%= car.model %></td>
+    31:           <td><%= car.maker %></td>
+    32:           <td><%= car.year %></td>
+    33:           <td><%= car.year_make %></td>
+  
+app/views/cars/index.html.erb:30:in `block in _app_views_cars_index_html_erb___3658011350273312335_70287922512120'
+app/views/cars/index.html.erb:27:in `_app_views_cars_index_html_erb___3658011350273312335_70287922512120'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.9ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:09:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (70.3ms)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `category' for #<#<Class:0x007fda40385f50>:0x007fda3c971198>
+Did you mean?  category_url):
+    26:         <tbody>
+    27:          <% @cars.each do |car| %>
+    28:          <tr>
+    29:           <td style="width: 40px"><%= category.id %></td>
+    30:           <td><%= car.model %></td>
+    31:           <td><%= car.maker %></td>
+    32:           <td><%= car.year %></td>
+  
+app/views/cars/index.html.erb:29:in `block in _app_views_cars_index_html_erb___3658011350273312335_70287648067040'
+app/views/cars/index.html.erb:27:in `_app_views_cars_index_html_erb___3658011350273312335_70287648067040'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.2ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:09:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 151ms (Views: 136.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:10:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (26.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 794ms (Views: 675.9ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/cars/new" for 172.18.0.1 at 2017-08-30 18:11:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#new as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (20.9ms)
+  Rendered cars/new.html.erb within layouts/backoffice (36.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 659ms (Views: 636.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars/new" for 172.18.0.1 at 2017-08-30 18:21:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#new as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (6.4ms)
+  Rendered cars/new.html.erb within layouts/backoffice (21.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.8ms)
+Completed 200 OK in 631ms (Views: 610.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars/new" for 172.18.0.1 at 2017-08-30 18:24:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#new as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (100.5ms)
+  Rendered cars/new.html.erb within layouts/backoffice (121.3ms)
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `action_message' for #<#<Class:0x007fda363b6970>:0x007fda5cd386f8>
+Did you mean?  action_name):
+    39: 
+    40: 
+    41: <h1 class="panel panel-header">
+    42:   <%= action_message %>
+    43: </h1>
+    44: <% if @car.errors.any? %>
+    45: <% @car.errors.full_messages.each do |message| %>
+  
+app/views/cars/_form.html.erb:42:in `_app_views_cars__form_html_erb___2999849884424508737_33838680'
+app/views/cars/new.html.erb:3:in `_app_views_cars_new_html_erb__1982136278114470969_70287918486200'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.3ms)
+Started GET "/cars/new" for 172.18.0.1 at 2017-08-30 18:29:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#new as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (5.2ms)
+  Rendered cars/new.html.erb within layouts/backoffice (21.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 576ms (Views: 556.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-08-30 18:30:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (14.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 581ms (Views: 516.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:30:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 687ms (Views: 661.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:30:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (6.2ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (25.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 660ms (Views: 613.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:31:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (6.1ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (21.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 567ms (Views: 544.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:31:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (4.6ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (22.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 687ms (Views: 663.1ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/cars/1" for 172.18.0.1 at 2017-08-30 18:31:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rIgY5nuugaiwaIqbv+s4IPxcN4tRw4C7oMufJuogrzEcONwoqEWHfvDj2tbqKUQm4+2r1phvV5vUJHAXQUoZkw==", "car"=>{"model"=>"Land Rover", "maker"=>"Land Rover", "year(3i)"=>"31", "year(2i)"=>"7", "year(1i)"=>"2017", "year_make(3i)"=>"31", "year_make(2i)"=>"7", "year_make(1i)"=>"2017"}, "id"=>"1"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 16ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/cars/1" for 172.18.0.1 at 2017-08-30 18:31:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/backoffice
+  Rendered cars/show.html.erb within layouts/backoffice (1.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 645ms (Views: 615.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cars/1" for 172.18.0.1 at 2017-08-30 18:41:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/backoffice
+  Rendered cars/show.html.erb within layouts/backoffice (19.4ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `model' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Model:</strong>
+    5:   <%= @car.model %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/cars/show.html.erb:5:in `_app_views_cars_show_html_erb___2019821957129121159_70287578876700'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.4ms)
+Started GET "/cars/" for 172.18.0.1 at 2017-08-30 18:41:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (18.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 721ms (Views: 660.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:42:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (6.3ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (27.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.8ms)
+Completed 200 OK in 787ms (Views: 762.2ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/cars/1" for 172.18.0.1 at 2017-08-30 18:42:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wbeDYKuReouevMpXbnZy3O4qfph3YIjGMPC6DQpEvq5xB0eueHp8Xd43mho7tA7a8Zvixb7MX+ZEH1U8oS4IDA==", "car"=>{"model"=>"Land Rover", "maker"=>"Land Rover", "year(3i)"=>"31", "year(2i)"=>"7", "year(1i)"=>"2017", "year_make(3i)"=>"31", "year_make(2i)"=>"7", "year_make(1i)"=>"2017"}, "id"=>"1"}
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 43ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/cars/1" for 172.18.0.1 at 2017-08-30 18:42:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/backoffice
+  Rendered cars/show.html.erb within layouts/backoffice (20.0ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `model' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Model:</strong>
+    5:   <%= @car.model %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/cars/show.html.erb:5:in `_app_views_cars_show_html_erb___2019821957129121159_70287645645300'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.0ms)
+Started GET "/categories" for 172.18.0.1 at 2017-08-30 18:42:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (9.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 546ms (Views: 504.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/new" for 172.18.0.1 at 2017-08-30 18:42:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/backoffice
+  Rendered categories/_form.html.erb (2.8ms)
+  Rendered categories/new.html.erb within layouts/backoffice (18.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (4.0ms)
+Completed 200 OK in 578ms (Views: 557.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/categories" for 172.18.0.1 at 2017-08-30 18:42:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bNBlvrzCROR94HiI+WOinaJ+Eqw96rh14zJfg26eDiPcYKFwbylCMj1rKMWsod6bvc+O8fRGb1WX3bCyxfS4gQ==", "category"=>{"description"=>"Teto"}}
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "Teto"], ["created_at", "2017-08-30 18:42:41.176710"], ["updated_at", "2017-08-30 18:42:41.176710"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 32ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-08-30 18:42:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (5.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 770ms (Views: 745.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:43:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (13.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 585ms (Views: 509.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:43:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (26.7ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (41.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 510ms (Views: 485.1ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/cars/1" for 172.18.0.1 at 2017-08-30 18:43:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LYqyQVGZHmklnoRGdvoBwgi2Tqr7q6lQQitzMfFS4fSdOnaPgnIYv2UV1AsjOH3EFwfS9zIHfnA2xJwAWjhXVg==", "car"=>{"model"=>"Land Rover", "maker"=>"Land Rover", "year(3i)"=>"31", "year(2i)"=>"7", "year(1i)"=>"2017", "year_make(3i)"=>"31", "year_make(2i)"=>"7", "year_make(1i)"=>"2017"}, "id"=>"1"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 13ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/cars/1" for 172.18.0.1 at 2017-08-30 18:43:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/backoffice
+  Rendered cars/show.html.erb within layouts/backoffice (15.9ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `model' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Model:</strong>
+    5:   <%= @car.model %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/cars/show.html.erb:5:in `_app_views_cars_show_html_erb___2019821957129121159_70287580355100'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.7ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:44:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (13.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 615ms (Views: 523.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:44:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (6.2ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (22.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 597ms (Views: 570.7ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/cars/1" for 172.18.0.1 at 2017-08-30 18:44:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fptJLzu86o5bxXWGGNBsZ7INW7psAvrgxaS74UrxHQ/OK43h6FfsWBtOJctNEhBhrbzH56WuLcCxS1TQ4ZurrQ==", "car"=>{"model"=>"Land Rover", "maker"=>"Land Rover", "year(3i)"=>"31", "year(2i)"=>"7", "year(1i)"=>"2017", "year_make(3i)"=>"31", "year_make(2i)"=>"7", "year_make(1i)"=>"2017"}, "id"=>"1"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (1.7ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 19ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/cars/1" for 172.18.0.1 at 2017-08-30 18:44:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/backoffice
+  Rendered cars/show.html.erb within layouts/backoffice (21.3ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `model' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Model:</strong>
+    5:   <%= @car.model %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/cars/show.html.erb:5:in `_app_views_cars_show_html_erb___2019821957129121159_70287924549960'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.2ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:45:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (13.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.3ms)
+Completed 200 OK in 671ms (Views: 582.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:45:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (5.3ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (22.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 607ms (Views: 584.0ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/cars/1" for 172.18.0.1 at 2017-08-30 18:45:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I9ODo8iUWO0dOmJIatKEHlDGOv+KZSbD2igg6HmgD9mTY0dtG39eO12xMgU/EPgYT3emokPJ8eOux8/Z0sq5ew==", "car"=>{"model"=>"Land Rover", "maker"=>"Land Rover", "year(3i)"=>"31", "year(2i)"=>"7", "year(1i)"=>"2017", "year_make(3i)"=>"31", "year_make(2i)"=>"7", "year_make(1i)"=>"2017"}, "id"=>"1"}
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 20ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/cars/1" for 172.18.0.1 at 2017-08-30 18:45:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/cars/1"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [88 times] (42.7ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.1ms)
+Started GET "/cars/" for 172.18.0.1 at 2017-08-30 18:47:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (13.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 683ms (Views: 583.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:47:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (5.7ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (23.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.8ms)
+Completed 200 OK in 678ms (Views: 652.5ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/cars/1" for 172.18.0.1 at 2017-08-30 18:47:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ara4QBmGAF0zrGqSmnVWYlkvF6KQ8riqMduRe1rPAweyBnyOym0Gi3MnOt/PtypkRp6L/1leb4pFNH5K8aW1pQ==", "car"=>{"model"=>"Land Rover", "maker"=>"Land Rover", "year(3i)"=>"31", "year(2i)"=>"7", "year(1i)"=>"2017", "year_make(3i)"=>"31", "year_make(2i)"=>"7", "year_make(1i)"=>"2017"}, "id"=>"1"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 101ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/cars/1" for 172.18.0.1 at 2017-08-30 18:47:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/cars/1"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [88 times] (40.7ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.1ms)
+Started GET "/cars/1" for 172.18.0.1 at 2017-08-30 18:47:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/cars/1"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [88 times] (44.7ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.0ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:48:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (15.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.5ms)
+Completed 200 OK in 651ms (Views: 565.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/cars/1/edit" for 172.18.0.1 at 2017-08-30 18:48:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (6.8ms)
+  Rendered cars/edit.html.erb within layouts/backoffice (21.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.9ms)
+Completed 200 OK in 610ms (Views: 586.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/cars/1" for 172.18.0.1 at 2017-08-30 18:48:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KsXwDvrFj/cF10xEAs2JUlsmPzhFw4M/1FLXPzbtALqadTTAKS6JIUVcHAlXD/VURJejZYxvVB+gvTgOnYe2GA==", "car"=>{"model"=>"Land Rover", "maker"=>"Land Rover", "year(3i)"=>"31", "year(2i)"=>"7", "year(1i)"=>"2017", "year_make(3i)"=>"31", "year_make(2i)"=>"7", "year_make(1i)"=>"2017"}, "id"=>"1"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 14ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:48:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (4.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 536ms (Views: 517.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cars/new" for 172.18.0.1 at 2017-08-30 18:48:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#new as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (5.7ms)
+  Rendered cars/new.html.erb within layouts/backoffice (21.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 737ms (Views: 713.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/cars" for 172.18.0.1 at 2017-08-30 18:48:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OJXALi1AtpjYJeWZR+5V8N2WUKU8YA7r1OhPB/u5w8OIJQTg/quwTpiutdQSLCn2wifM+PXM2cugB6A2UNN1YQ==", "car"=>{"model"=>"Gol", "maker"=>"Hb", "year(3i)"=>"30", "year(2i)"=>"8", "year(1i)"=>"2017", "year_make(3i)"=>"30", "year_make(2i)"=>"8", "year_make(1i)"=>"2017"}}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "cars" ("model", "maker", "year", "year_make", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["model", "Gol"], ["maker", "Hb"], ["year", "2017-08-30"], ["year_make", "2017-08-30"], ["created_at", "2017-08-30 18:48:14.679834"], ["updated_at", "2017-08-30 18:48:14.679834"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 46ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:48:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 654ms (Views: 620.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:49:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.2ms)
+Completed 200 OK in 707ms (Views: 678.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cars/4" for 172.18.0.1 at 2017-08-30 18:49:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/cars/4"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [88 times] (34.2ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.5ms)
+Started GET "/cars/4" for 172.18.0.1 at 2017-08-30 18:52:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/cars/4"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [88 times] (35.5ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.1ms)
+Started GET "/cars/3" for 172.18.0.1 at 2017-08-30 18:52:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/cars/3"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered collection of /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [88 times] (53.2ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (119.9ms)
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:53:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (6.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 606ms (Views: 580.8ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/cars/2" for 172.18.0.1 at 2017-08-30 18:53:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IKBsuwDz89nCI6RaChrzR5+jRA9iiNAadG6ZpI+bfI6QEKh10xj1D4Ko9Bdf2I9BgBLYUqskBzoAgXaVJPHKLA==", "id"=>"2"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.6ms)[0m  [1m[31mDELETE FROM "cars" WHERE "cars"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 13.4ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "cars" violates foreign key constraint "fk_rails_e7275a008c" on table "parts"
+DETAIL:  Key (id)=(2) is still referenced from table "parts".
+: DELETE FROM "cars" WHERE "cars"."id" = $1):
+  
+app/controllers/cars_controller.rb:58:in `destroy'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.1ms)
+Started DELETE "/cars/4" for 172.18.0.1 at 2017-08-30 18:53:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IKBsuwDz89nCI6RaChrzR5+jRA9iiNAadG6ZpI+bfI6QEKh10xj1D4Ko9Bdf2I9BgBLYUqskBzoAgXaVJPHKLA==", "id"=>"4"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "cars" WHERE "cars"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 22ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:53:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (2.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (1.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (10.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 658ms (Views: 629.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:53:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.9ms)
+Completed 200 OK in 543ms (Views: 521.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cars/new" for 172.18.0.1 at 2017-08-30 18:53:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#new as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/backoffice
+  Rendered cars/_form.html.erb (6.8ms)
+  Rendered cars/new.html.erb within layouts/backoffice (29.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (26.7ms)
+Completed 200 OK in 810ms (Views: 781.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/cars" for 172.18.0.1 at 2017-08-30 18:53:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xNMJqfljJVtZ1D0T2xa0t0xnG8di7rgxiR6U7z8Jn/90Y81nKogjjRlfbV6O1MixU9aHmqtCbxH98XvelGMpXQ==", "car"=>{"model"=>"Palio", "maker"=>"HB", "year(3i)"=>"30", "year(2i)"=>"8", "year(1i)"=>"2017", "year_make(3i)"=>"30", "year_make(2i)"=>"8", "year_make(1i)"=>"2017"}}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "cars" ("model", "maker", "year", "year_make", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["model", "Palio"], ["maker", "HB"], ["year", "2017-08-30"], ["year_make", "2017-08-30"], ["created_at", "2017-08-30 18:53:57.083574"], ["updated_at", "2017-08-30 18:53:57.083574"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 15ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:53:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (7.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 633ms (Views: 610.0ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/cars/5" for 172.18.0.1 at 2017-08-30 18:54:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OXv5oW70nwZ3ggoUtNt5vGWkSTjY4/guYyH5yi3DLGKJyz1vvR+Z0DcJWlnhGQW6ehXVZRFPLw4Xzhb7hqmawA==", "id"=>"5"}
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (1.4ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "cars" WHERE "cars"."id" = $1[0m  [["id", 5]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 31ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 18:54:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (10.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 764ms (Views: 735.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 19:05:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (17.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.8ms)
+Completed 200 OK in 960ms (Views: 841.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/parts" for 172.18.0.1 at 2017-08-30 19:05:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (1.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered parts/index.html.erb within layouts/application (252.9ms)
+Completed 200 OK in 456ms (Views: 398.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 19:05:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 598ms (Views: 578.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-08-30 19:10:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 502ms (Views: 482.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/parts" for 172.18.0.1 at 2017-08-30 19:10:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered parts/index.html.erb within layouts/application (129.1ms)
+Completed 200 OK in 308ms (Views: 280.0ms | ActiveRecord: 6.3ms)
+
+

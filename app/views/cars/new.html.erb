@@ -1,5 +1,5 @@
 <h1>New Car</h1>
 
-<%= render 'form', car: @car %>
+<%= render partial: "form", locals: {action_message: "Nova carro"} %>
 
 <%= link_to 'Back', cars_path %>

@@ -1,5 +1,5 @@
-class CarsController < ApplicationController
-  before_action :set_car, only: [:show, :edit, :update, :destroy]
+class CarsController < BackofficeController
+  before_action :set_car, only: [:edit, :update, :destroy]
 
   # GET /cars
   # GET /cars.json
@@ -24,17 +24,18 @@ class CarsController < ApplicationController
   # POST /cars
   # POST /cars.json
   def create
-    @car = Car.new(car_params)
-
-    respond_to do |format|
-      if @car.save
-        format.html { redirect_to @car, notice: 'Car was successfully created.' }
+    #acesso a um servico onde estara as regras de negocio do sistema.
+    @car = CarService.create(car_params)
+    
+    respond_to do |format|  
+      unless @car.errors.any? 
+        format.html { redirect_to cars_path, notice: 'Car was successfully created.' }
         format.json { render :show, status: :created, location: @car }
       else
         format.html { render :new }
         format.json { render json: @car.errors, status: :unprocessable_entity }
       end
-    end
+    end 
   end
 
   # PATCH/PUT /cars/1
@@ -42,7 +43,7 @@ class CarsController < ApplicationController
   def update
     respond_to do |format|
       if @car.update(car_params)
-        format.html { redirect_to @car, notice: 'Car was successfully updated.' }
+        format.html { redirect_to cars_path, notice: 'Car was successfully updated.' }
         format.json { render :show, status: :ok, location: @car }
       else
         format.html { render :edit }
