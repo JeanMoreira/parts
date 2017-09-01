@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get 'admins/index'
     resources :send_mail, except: [:show]
   end
-  resources :parts
+  resources :parts, except:[:show]
   resources :categories, except:[:show]
   resources :cars, except:[:show]
   resources :companies

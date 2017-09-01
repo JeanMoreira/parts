@@ -1,5 +1,3 @@
-<h1>New Part</h1>
-
-<%= render 'form', part: @part %>
+<%= render partial: "form", locals: {action_message: "Nova peça"} %>
 
 <%= link_to 'Back', parts_path %>
