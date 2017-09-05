@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   namespace :backoffice do
     get 'dashboard', to: 'dashboard#index'
     resources :admins, except: [:show]
+    resources :members, except: [:show]
     get 'admins/index'
+    get 'members/index'
     resources :send_mail, except: [:show]
   end
   resources :parts, except:[:show]

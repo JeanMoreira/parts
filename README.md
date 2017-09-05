@@ -34,3 +34,14 @@
 # Recriar db
 
 docker-compose run --rm website bundle exec rake db:drop db:create db:migrate db:seed
+
+# Gerar erd do banco 
+
+docker-compose run --rm website bundle exec
+
+
+# Generat policy 
+
+rails g pundit:policy post
+ 
+git link https://github.com/elabs/pundit

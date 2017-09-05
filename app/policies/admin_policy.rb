@@ -28,7 +28,6 @@ class AdminPolicy < ApplicationPolicy
       else	
       	scope.with_restricted_access	
       end
-      
     end
   end
 end
