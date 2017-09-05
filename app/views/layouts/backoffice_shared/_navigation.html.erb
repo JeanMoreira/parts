@@ -10,7 +10,7 @@
     </div>
     <!-- /.navbar-header -->
 
-    <ul class="nav navbar-top-links navbar-right">  
+    <ul class="nav navbar-top-links navbar-right">
     <li><%= current_admin.email %></li>
 
         <li class="dropdown">
@@ -62,6 +62,11 @@
                 <li>
                     <%= link_to parts_path do %>
                         <i class="fa fa-puzzle-piece fa-fw"></i>Peças
+                    <% end  %>
+                </li>
+                <li>
+                    <%= link_to companies_path do %>
+                        <i class="fa fa-puzzle-piece fa-fw"></i>Empresas
                     <% end  %>
                 </li>
             </ul>

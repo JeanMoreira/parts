@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
-gem 'rails-i18n' 
+gem 'rails-i18n'
 gem 'enum_help'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -26,7 +26,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+# Turbolinks makes navigating your web application kster. Read more: https://github.com/turbolinks/turbolinks
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # https://github.com/plataformatec/devise#getting-started
@@ -59,7 +59,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-
+  gem 'faker', '~> 1.6', '>= 1.6.3'
+  gem 'cpf_faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
