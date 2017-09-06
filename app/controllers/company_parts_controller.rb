@@ -1,5 +1,5 @@
-class CompanyPartsController < ApplicationController
-  before_action :set_company_part, only: [:show, :edit, :update, :destroy]
+class CompanyPartsController < BackofficeController
+  before_action :set_company_part, only: %i[show edit update destroy]
 
   # GET /company_parts
   # GET /company_parts.json
@@ -9,8 +9,7 @@ class CompanyPartsController < ApplicationController
 
   # GET /company_parts/1
   # GET /company_parts/1.json
-  def show
-  end
+  def show; end
 
   # GET /company_parts/new
   def new
@@ -18,8 +17,7 @@ class CompanyPartsController < ApplicationController
   end
 
   # GET /company_parts/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /company_parts
   # POST /company_parts.json
@@ -62,13 +60,14 @@ class CompanyPartsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_company_part
-      @company_part = CompanyPart.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def company_part_params
-      params.require(:company_part).permit(:company_id, :part_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_company_part
+    @company_part = CompanyPart.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def company_part_params
+    params.require(:company_part).permit(:company_id, :part_id)
+  end
 end

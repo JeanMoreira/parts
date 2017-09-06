@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company part:</strong>
+  <%= @sold.company_part %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @sold.member %>
+</p>
+
+<p>
+  <strong>Price cents:</strong>
+  <%= @sold.price_cents %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @sold.quantity %>
+</p>
+
+<p>
+  <strong>Promotion:</strong>
+  <%= @sold.promotion %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @sold.status %>
+</p>
+
+<%= link_to 'Edit', edit_sold_path(@sold) %> |
+<%= link_to 'Back', solds_path %>
