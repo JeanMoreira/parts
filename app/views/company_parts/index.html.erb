@@ -1,29 +1,40 @@
-<p id="notice"><%= notice %></p>
+  <h1 class="page-header">Anuncios</h1>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      LISTANDO ANÚNCIOS
+      <%= link_to new_company_part_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
+      <i class="fa fa-plus"></i>
+      <% end %>
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Peça</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
 
-<h1>Company Parts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Company</th>
-      <th>Part</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @company_parts.each do |company_part| %>
-      <tr>
-        <td><%= company_part.company %></td>
-        <td><%= company_part.part %></td>
-        <td><%= link_to 'Show', company_part %></td>
-        <td><%= link_to 'Edit', edit_company_part_path(company_part) %></td>
-        <td><%= link_to 'Destroy', company_part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Company Part', new_company_part_path %>
+          <tbody>
+            <% @company_parts.each do |company_part| %>
+              <tr>
+                <td><%= company_part.company.name %></td>
+                <td><%= company_part.part.description %></td>
+                <td style="width: 150px"><%= link_to edit_company_part_path(company_part), class:"btn btn-primary btn-circle" do %>
+                  <i class="fa fa-edit"></i>
+                  <% end %>
+                  <%= link_to company_part_path(company_part), method: :delete, class: "btn btn-danger btn-circle", data:{confirm: t('messages.confirm_with', item: "este anuncio")} do %>
+                  <i class="fa fa-minus"></i>
+                  <% end %>
+                </tr>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
