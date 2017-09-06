@@ -5259,3 +5259,1113 @@ Processing by Backoffice::MembersController#index as HTML
 Completed 200 OK in 508ms (Views: 486.5ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/categories" for 172.18.0.1 at 2017-09-05 04:27:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (30.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 2555ms (Views: 2433.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-09-05 04:27:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.0ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (1260.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 1800ms (Views: 1747.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/parts" for 172.18.0.1 at 2017-09-05 04:27:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PartsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/backoffice
+  [1m[36mPart Load (1.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered parts/index.html.erb within layouts/backoffice (273.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 859ms (Views: 798.9ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/backoffice/members" for 172.18.0.1 at 2017-09-05 04:27:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::MembersController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/members/index.html.erb within layouts/backoffice
+  [1m[36mMember Load (1.3ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered backoffice/members/shared/_send_mail_modal.html.erb (2.0ms)
+  Rendered backoffice/members/index.html.erb within layouts/backoffice (48.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.5ms)
+Completed 200 OK in 629ms (Views: 588.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-09-05 04:27:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (7.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.7ms)
+Completed 200 OK in 540ms (Views: 519.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/parts" for 172.18.0.1 at 2017-09-05 04:28:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PartsController#index as HTML
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/backoffice
+  [1m[36mPart Load (0.8ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered parts/index.html.erb within layouts/backoffice (152.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.0ms)
+Completed 200 OK in 734ms (Views: 701.6ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-09-05 04:28:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 590ms (Views: 566.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/companies" for 172.18.0.1 at 2017-09-05 04:28:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering companies/index.html.erb within layouts/backoffice
+  [1m[36mCompany Load (1.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/backoffice (14.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 629ms (Views: 574.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/parts" for 172.18.0.1 at 2017-09-05 04:28:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PartsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/backoffice
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered parts/index.html.erb within layouts/backoffice (123.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 644ms (Views: 618.7ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-09-05 04:28:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.3ms)
+Completed 200 OK in 561ms (Views: 539.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/backoffice/admins/index" for 172.18.0.1 at 2017-09-05 04:28:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."role" = $1[0m  [["role", 1]]
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (1.9ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (24.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 572ms (Views: 548.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cars" for 172.18.0.1 at 2017-09-05 04:29:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CarsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/backoffice
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/backoffice (5.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 483ms (Views: 462.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/parts" for 172.18.0.1 at 2017-09-05 04:29:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PartsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/backoffice
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered parts/index.html.erb within layouts/backoffice (115.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.3ms)
+Completed 200 OK in 652ms (Views: 626.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/companies" for 172.18.0.1 at 2017-09-05 04:29:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering companies/index.html.erb within layouts/backoffice
+  [1m[36mCompany Load (0.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/backoffice (4.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.5ms)
+Completed 200 OK in 582ms (Views: 559.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/backoffice/members" for 172.18.0.1 at 2017-09-05 04:29:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Backoffice::MembersController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/members/index.html.erb within layouts/backoffice
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered backoffice/members/shared/_send_mail_modal.html.erb (1.9ms)
+  Rendered backoffice/members/index.html.erb within layouts/backoffice (27.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.0ms)
+Completed 200 OK in 634ms (Views: 606.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories" for 172.18.0.1 at 2017-09-05 04:29:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/backoffice (4.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 595ms (Views: 569.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/companies" for 172.18.0.1 at 2017-09-05 04:35:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering companies/index.html.erb within layouts/backoffice
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/backoffice (3.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 480ms (Views: 459.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/parts" for 172.18.0.1 at 2017-09-05 04:35:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PartsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/backoffice
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered parts/index.html.erb within layouts/backoffice (114.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.7ms)
+Completed 200 OK in 596ms (Views: 567.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/backoffice" for 172.18.0.1 at 2017-09-05 12:42:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (5.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (10.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 2708ms (Views: 2598.7ms | ActiveRecord: 20.4ms)
+
+
+  [1m[36mMember Load (5.8ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (5.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Incidunt quam sed dolorem quis et et."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 4], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.184588"], ["updated_at", "2017-09-05 13:09:56.184588"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Voluptatem perspiciatis et quam sed."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.198268"], ["updated_at", "2017-09-05 13:09:56.198268"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Officia inventore non voluptates eum voluptas aut."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 20], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.208542"], ["updated_at", "2017-09-05 13:09:56.208542"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Fuga commodi adipisci ut quas et et."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 12], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.218565"], ["updated_at", "2017-09-05 13:09:56.218565"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Suscipit voluptatem nisi sequi at sunt consectetur aut."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 8], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.228905"], ["updated_at", "2017-09-05 13:09:56.228905"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quia voluptas optio at assumenda veritatis soluta."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 19], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.239381"], ["updated_at", "2017-09-05 13:09:56.239381"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Deserunt ducimus sit voluptatem natus dolores ab."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 18], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.249606"], ["updated_at", "2017-09-05 13:09:56.249606"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ab ut sed."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 21], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.259966"], ["updated_at", "2017-09-05 13:09:56.259966"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Veritatis amet rem non fugiat qui eligendi aut."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 22], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.270432"], ["updated_at", "2017-09-05 13:09:56.270432"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Illo voluptatem omnis nobis qui tempora."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.282389"], ["updated_at", "2017-09-05 13:09:56.282389"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ex repudiandae odio praesentium qui voluptatem ipsa quaerat."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 12], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.292898"], ["updated_at", "2017-09-05 13:09:56.292898"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Nemo beatae fugiat aut pariatur porro doloremque."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 19], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.303430"], ["updated_at", "2017-09-05 13:09:56.303430"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quidem error soluta est sapiente at animi."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 6], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.313769"], ["updated_at", "2017-09-05 13:09:56.313769"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Mollitia dolorem."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 18], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.323953"], ["updated_at", "2017-09-05 13:09:56.323953"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Dolorem quis rerum libero et et maiores."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.334114"], ["updated_at", "2017-09-05 13:09:56.334114"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Eum harum sit et non ut adipisci vel."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 1], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.344797"], ["updated_at", "2017-09-05 13:09:56.344797"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Consequatur assumenda consequuntur autem."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 26], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.355984"], ["updated_at", "2017-09-05 13:09:56.355984"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Non dolorem ullam."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 2], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.367025"], ["updated_at", "2017-09-05 13:09:56.367025"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quia rerum."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 24], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.377548"], ["updated_at", "2017-09-05 13:09:56.377548"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Error eos mollitia ut."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 9], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.389722"], ["updated_at", "2017-09-05 13:09:56.389722"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Eos distinctio esse nisi corrupti officiis temporibus illo."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 18], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.400201"], ["updated_at", "2017-09-05 13:09:56.400201"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Voluptatum a perferendis dolor minus iure rem."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 17], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.410621"], ["updated_at", "2017-09-05 13:09:56.410621"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Dolor et quam placeat quis vel."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 19], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.421216"], ["updated_at", "2017-09-05 13:09:56.421216"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Eveniet nulla unde dolores repellendus veritatis omnis."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 14], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.431547"], ["updated_at", "2017-09-05 13:09:56.431547"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ullam vel quasi consequatur."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 2], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.442025"], ["updated_at", "2017-09-05 13:09:56.442025"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Odit et atque minus quaerat qui."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 8], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.452329"], ["updated_at", "2017-09-05 13:09:56.452329"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Dolor ut voluptate ex ut non provident consequatur."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 8], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.463839"], ["updated_at", "2017-09-05 13:09:56.463839"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Sit molestiae inventore voluptates a velit."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 2], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.474660"], ["updated_at", "2017-09-05 13:09:56.474660"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Repellat sint voluptatem deleniti enim rerum autem necessitatibus enim quia."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 24], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.485762"], ["updated_at", "2017-09-05 13:09:56.485762"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Laborum ea alias."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 23], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.496789"], ["updated_at", "2017-09-05 13:09:56.496789"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "A aliquid architecto."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 2], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.507511"], ["updated_at", "2017-09-05 13:09:56.507511"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "In quod sit harum impedit reprehenderit."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 26], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.517799"], ["updated_at", "2017-09-05 13:09:56.517799"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quae et excepturi autem."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 21], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.529724"], ["updated_at", "2017-09-05 13:09:56.529724"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Cumque qui cum."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 27], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.540327"], ["updated_at", "2017-09-05 13:09:56.540327"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Molestias velit debitis deserunt reiciendis dolor quidem."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 21], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.550539"], ["updated_at", "2017-09-05 13:09:56.550539"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Nam id fugit sint saepe iste quae unde."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 17], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.560597"], ["updated_at", "2017-09-05 13:09:56.560597"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Nihil quis eos non voluptatem facilis."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 26], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.572107"], ["updated_at", "2017-09-05 13:09:56.572107"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Occaecati eos quia iusto quia."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.582924"], ["updated_at", "2017-09-05 13:09:56.582924"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Enim culpa nostrum explicabo aspernatur dicta molestiae fugit."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 24], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.594058"], ["updated_at", "2017-09-05 13:09:56.594058"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Minus sit dolor ad dolores sed."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 2], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.604660"], ["updated_at", "2017-09-05 13:09:56.604660"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Laborum qui laudantium dolores ea est consequatur cupiditate ut consequatur."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 16], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.615360"], ["updated_at", "2017-09-05 13:09:56.615360"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Velit dolor nihil modi consectetur sunt."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 21], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.625871"], ["updated_at", "2017-09-05 13:09:56.625871"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Sunt odit placeat magni est rerum eum delectus."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 23], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.636417"], ["updated_at", "2017-09-05 13:09:56.636417"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Dolores enim laborum illum ut."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 12], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.646920"], ["updated_at", "2017-09-05 13:09:56.646920"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ut quasi vero aut sed."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 23], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.658082"], ["updated_at", "2017-09-05 13:09:56.658082"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Sequi voluptatem dolorum culpa laudantium tempora sint rem dolores."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 22], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.668961"], ["updated_at", "2017-09-05 13:09:56.668961"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quidem repellendus consequatur quisquam perspiciatis aspernatur et non."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 8], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.679439"], ["updated_at", "2017-09-05 13:09:56.679439"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Eos vel assumenda aperiam ipsa."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 11], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.689907"], ["updated_at", "2017-09-05 13:09:56.689907"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Consequatur et voluptas tempora id sed commodi."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 12], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.700316"], ["updated_at", "2017-09-05 13:09:56.700316"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Et quibusdam assumenda vel sint dolores quisquam error."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 13], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.711499"], ["updated_at", "2017-09-05 13:09:56.711499"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Nobis necessitatibus magnam nihil totam distinctio voluptatum officia iure."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 20], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.721840"], ["updated_at", "2017-09-05 13:09:56.721840"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Maiores id deserunt illo accusamus."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 11], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.732595"], ["updated_at", "2017-09-05 13:09:56.732595"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Minima voluptas nulla quisquam consectetur qui quo."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 12], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.742890"], ["updated_at", "2017-09-05 13:09:56.742890"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Beatae labore impedit iste aut maiores eius distinctio accusamus."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 1], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.753408"], ["updated_at", "2017-09-05 13:09:56.753408"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Fugit et ut distinctio sapiente dicta sint."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 7], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.763864"], ["updated_at", "2017-09-05 13:09:56.763864"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ipsam deleniti neque sapiente consequatur cupiditate nisi cumque odio est."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 1], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.774577"], ["updated_at", "2017-09-05 13:09:56.774577"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Non libero quas non."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 27], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.785390"], ["updated_at", "2017-09-05 13:09:56.785390"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Eum aut odit adipisci nobis pariatur quidem."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 11], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.795957"], ["updated_at", "2017-09-05 13:09:56.795957"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Fugit ipsam sequi inventore perferendis nisi qui sit repudiandae."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 23], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.806695"], ["updated_at", "2017-09-05 13:09:56.806695"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Dignissimos rerum corrupti sint est ut id."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 14], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.817073"], ["updated_at", "2017-09-05 13:09:56.817073"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Enim vel omnis magnam assumenda eligendi veniam unde."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 8], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.827495"], ["updated_at", "2017-09-05 13:09:56.827495"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quia voluptatem illum tenetur non."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 8], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.838066"], ["updated_at", "2017-09-05 13:09:56.838066"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Aut excepturi ea rerum deserunt."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 12], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.848645"], ["updated_at", "2017-09-05 13:09:56.848645"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Modi ipsa quas quidem."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 15], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.859851"], ["updated_at", "2017-09-05 13:09:56.859851"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ut consequatur dolores natus."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.869949"], ["updated_at", "2017-09-05 13:09:56.869949"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ut iure illum."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 2], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.880130"], ["updated_at", "2017-09-05 13:09:56.880130"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Eum repellat voluptatum occaecati sed error nihil eos."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 9], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.890269"], ["updated_at", "2017-09-05 13:09:56.890269"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Est voluptatum voluptas hic fuga."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 13], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.900394"], ["updated_at", "2017-09-05 13:09:56.900394"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Consequatur possimus optio excepturi quis aut."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 23], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.910357"], ["updated_at", "2017-09-05 13:09:56.910357"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Non error."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.920255"], ["updated_at", "2017-09-05 13:09:56.920255"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ex architecto aut est laboriosam voluptatem ipsa."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 22], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.930977"], ["updated_at", "2017-09-05 13:09:56.930977"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Delectus repellat reprehenderit et aut adipisci saepe."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 26], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.941062"], ["updated_at", "2017-09-05 13:09:56.941062"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Nostrum quisquam dignissimos nulla impedit optio sed recusandae."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 8], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.950748"], ["updated_at", "2017-09-05 13:09:56.950748"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Provident mollitia nihil sed laborum molestiae."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 8], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.960526"], ["updated_at", "2017-09-05 13:09:56.960526"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Aut quos."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 20], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.971148"], ["updated_at", "2017-09-05 13:09:56.971148"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Non quibusdam ex sunt."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 18], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.981573"], ["updated_at", "2017-09-05 13:09:56.981573"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Qui ea tempore consequatur eligendi explicabo sed."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 9], ["member_id", 1], ["created_at", "2017-09-05 13:09:56.993178"], ["updated_at", "2017-09-05 13:09:56.993178"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Iste quo aut maxime a voluptatem nihil doloremque nulla."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 22], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.003269"], ["updated_at", "2017-09-05 13:09:57.003269"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Qui necessitatibus ut expedita placeat corporis delectus."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 21], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.013287"], ["updated_at", "2017-09-05 13:09:57.013287"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ducimus at facere quo nostrum quia similique omnis."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 28], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.033454"], ["updated_at", "2017-09-05 13:09:57.033454"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Dicta officia sint minus vitae vel sed."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 16], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.045079"], ["updated_at", "2017-09-05 13:09:57.045079"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.8ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Et iure doloremque."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 7], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.056187"], ["updated_at", "2017-09-05 13:09:57.056187"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quae quia accusamus aut repellendus dolor repellat."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 12], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.067856"], ["updated_at", "2017-09-05 13:09:57.067856"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Inventore pariatur magni est."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 14], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.079284"], ["updated_at", "2017-09-05 13:09:57.079284"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quia iusto eveniet sit magnam sint voluptas libero."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 6], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.090631"], ["updated_at", "2017-09-05 13:09:57.090631"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Et blanditiis omnis ut amet doloremque culpa accusamus."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 22], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.100972"], ["updated_at", "2017-09-05 13:09:57.100972"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Id ut facilis impedit ex quisquam voluptas."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 26], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.111453"], ["updated_at", "2017-09-05 13:09:57.111453"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Voluptatibus delectus molestiae veniam cupiditate quia."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 28], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.122005"], ["updated_at", "2017-09-05 13:09:57.122005"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Facere aliquid temporibus ut."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 12], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.132284"], ["updated_at", "2017-09-05 13:09:57.132284"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Nisi alias explicabo veniam cupiditate laboriosam."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.143012"], ["updated_at", "2017-09-05 13:09:57.143012"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Magnam sit cumque voluptate."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 10], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.154758"], ["updated_at", "2017-09-05 13:09:57.154758"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Non ipsam voluptatum enim corrupti repellat et."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 15], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.165274"], ["updated_at", "2017-09-05 13:09:57.165274"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Beatae voluptatibus non voluptas possimus magni."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 19], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.176433"], ["updated_at", "2017-09-05 13:09:57.176433"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Architecto voluptatum doloremque quam eos voluptas officiis ut nihil."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 16], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.187372"], ["updated_at", "2017-09-05 13:09:57.187372"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quos odit reprehenderit minima rerum."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 19], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.198158"], ["updated_at", "2017-09-05 13:09:57.198158"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Qui nulla aut laborum voluptate excepturi et."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 23], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.208893"], ["updated_at", "2017-09-05 13:09:57.208893"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Fuga magni tempora et aut eveniet iusto deleniti."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 2], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.219250"], ["updated_at", "2017-09-05 13:09:57.219250"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quis cum eum sint voluptate error ducimus."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 17], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.230854"], ["updated_at", "2017-09-05 13:09:57.230854"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Est ipsum eius facere."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.241545"], ["updated_at", "2017-09-05 13:09:57.241545"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Non libero aperiam."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 5], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.252461"], ["updated_at", "2017-09-05 13:09:57.252461"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Quibusdam odio sapiente nulla vitae iste placeat."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 1], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.263742"], ["updated_at", "2017-09-05 13:09:57.263742"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.8ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "In assumenda similique necessitatibus quaerat."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 14], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.275178"], ["updated_at", "2017-09-05 13:09:57.275178"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Qui aut iusto aut et est occaecati dolor et dignissimos."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 22], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.286985"], ["updated_at", "2017-09-05 13:09:57.286985"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Qui nisi ut ea deserunt quos."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 11], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.299481"], ["updated_at", "2017-09-05 13:09:57.299481"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMember Load (1.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "part_id", "member_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ut voluptatem inventore voluptatem dolor."], ["description", "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo."], ["part_id", 2], ["member_id", 1], ["created_at", "2017-09-05 13:09:57.311594"], ["updated_at", "2017-09-05 13:09:57.311594"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Started DELETE "/admins/sign_out" for 172.18.0.1 at 2017-09-05 13:15:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MmUaPaHhX8viNDe3tzvGUkoVOYxPmWMMcxIFuXtWmjy9MlDENIFkpNsQIVsxLgbltmt/+jaqepSMEUBdBEXIVA=="}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1327ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-09-05 13:15:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (3.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mAd Load (2.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" ORDER BY "ads"."created_at" DESC[0m
+  Rendered site/home/index.html.erb within layouts/site (58.7ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.7ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 513ms (Views: 428.9ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-09-05 13:16:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/site/home_controller.rb:6:in `index'
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /box/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.4ms)
+Started GET "/" for 172.18.0.1 at 2017-09-05 13:16:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mAd Load (0.9ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" ORDER BY "ads"."created_at" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/home/index.html.erb within layouts/site (37.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 486ms (Views: 388.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-09-05 13:17:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" ORDER BY "ads"."created_at" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/home/index.html.erb within layouts/site (6.5ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.6ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 328ms (Views: 309.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-09-05 13:20:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" ORDER BY "ads"."created_at" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/home/index.html.erb within layouts/site (5.6ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.6ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 322ms (Views: 300.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 172.18.0.1 at 2017-09-05 13:20:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mAd Load (1.9ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" ORDER BY "ads"."created_at" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/home/index.html.erb within layouts/site (9.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.9ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 374ms (Views: 350.3ms | ActiveRecord: 2.9ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4613686039637265570);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPriceCentsToAds (20170905140232)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.1ms)[0m  [1m[35mALTER TABLE "ads" ADD "price_cents" integer[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170905140232"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (12.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4613686039637265570)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
