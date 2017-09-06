@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_part: one
+  member: one
+  price_cents: 1
+  quantity: 1
+  promotion: false
+  status: MyString
+
+two:
+  company_part: two
+  member: two
+  price_cents: 1
+  quantity: 1
+  promotion: false
+  status: MyString

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  resources :solds
   resources :part_promotions
   resources :part_details
   resources :company_parts
