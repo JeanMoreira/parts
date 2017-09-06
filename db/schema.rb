@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170901174619) do
+ActiveRecord::Schema.define(version: 20170905204654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,24 @@ ActiveRecord::Schema.define(version: 20170901174619) do
     t.integer "company_id", null: false
   end
 
+  create_table "companies_parts", force: :cascade do |t|
+    t.integer  "company_id"
+    t.integer  "part_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_companies_parts_on_company_id", using: :btree
+    t.index ["part_id"], name: "index_companies_parts_on_part_id", using: :btree
+  end
+
+  create_table "company_parts", force: :cascade do |t|
+    t.integer  "company_id"
+    t.integer  "part_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_company_parts_on_company_id", using: :btree
+    t.index ["part_id"], name: "index_company_parts_on_part_id", using: :btree
+  end
+
   create_table "members", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -102,6 +120,26 @@ ActiveRecord::Schema.define(version: 20170901174619) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_members_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "part_details", force: :cascade do |t|
+    t.integer  "price_cents"
+    t.boolean  "negotiabel"
+    t.integer  "quantity"
+    t.integer  "company_part_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["company_part_id"], name: "index_part_details_on_company_part_id", using: :btree
+  end
+
+  create_table "part_promotions", force: :cascade do |t|
+    t.integer  "needed_buy"
+    t.integer  "price_cents"
+    t.integer  "stock_quantity"
+    t.integer  "company_part_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["company_part_id"], name: "index_part_promotions_on_company_part_id", using: :btree
   end
 
   create_table "parts", force: :cascade do |t|
@@ -126,6 +164,12 @@ ActiveRecord::Schema.define(version: 20170901174619) do
   add_foreign_key "addresses", "members"
   add_foreign_key "ads", "members"
   add_foreign_key "ads", "parts"
+  add_foreign_key "companies_parts", "companies"
+  add_foreign_key "companies_parts", "parts"
+  add_foreign_key "company_parts", "companies"
+  add_foreign_key "company_parts", "parts"
+  add_foreign_key "part_details", "company_parts"
+  add_foreign_key "part_promotions", "company_parts"
   add_foreign_key "parts", "cars"
   add_foreign_key "parts", "categories"
   add_foreign_key "phones", "members"

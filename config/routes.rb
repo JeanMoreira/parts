@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
 
+  resources :part_promotions
+  resources :part_details
+  resources :company_parts
   namespace :site do
     get 'home', to: 'home#index'
   end

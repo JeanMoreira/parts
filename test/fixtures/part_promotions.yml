@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  needed_buy: 1
+  price_cents: 1
+  stock_quantity: 1
+  company_part: one
+
+two:
+  needed_buy: 1
+  price_cents: 1
+  stock_quantity: 1
+  company_part: two

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price_cents: 1
+  negotiabel: false
+  quantity: 1
+  company_part: one
+
+two:
+  price_cents: 1
+  negotiabel: false
+  quantity: 1
+  company_part: two

@@ -1,0 +1,37 @@
+<%= form_for(part_detail) do |f| %>
+  <% if part_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(part_detail.errors.count, "error") %> prohibited this part_detail from being saved:</h2>
+
+      <ul>
+      <% part_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :price_cents %>
+    <%= f.number_field :price_cents %>
+  </div>
+
+  <div class="field">
+    <%= f.label :negotiabel %>
+    <%= f.check_box :negotiabel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :company_part_id %>
+    <%= f.text_field :company_part_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

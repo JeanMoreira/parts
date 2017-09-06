@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Needed buy:</strong>
+  <%= @part_promotion.needed_buy %>
+</p>
+
+<p>
+  <strong>Price cents:</strong>
+  <%= @part_promotion.price_cents %>
+</p>
+
+<p>
+  <strong>Stock quantity:</strong>
+  <%= @part_promotion.stock_quantity %>
+</p>
+
+<p>
+  <strong>Company part:</strong>
+  <%= @part_promotion.company_part %>
+</p>
+
+<%= link_to 'Edit', edit_part_promotion_path(@part_promotion) %> |
+<%= link_to 'Back', part_promotions_path %>

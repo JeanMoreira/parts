@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Part Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price cents</th>
+      <th>Negotiabel</th>
+      <th>Quantity</th>
+      <th>Company part</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @part_details.each do |part_detail| %>
+      <tr>
+        <td><%= part_detail.price_cents %></td>
+        <td><%= part_detail.negotiabel %></td>
+        <td><%= part_detail.quantity %></td>
+        <td><%= part_detail.company_part %></td>
+        <td><%= link_to 'Show', part_detail %></td>
+        <td><%= link_to 'Edit', edit_part_detail_path(part_detail) %></td>
+        <td><%= link_to 'Destroy', part_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Part Detail', new_part_detail_path %>

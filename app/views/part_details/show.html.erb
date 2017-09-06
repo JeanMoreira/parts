@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price cents:</strong>
+  <%= @part_detail.price_cents %>
+</p>
+
+<p>
+  <strong>Negotiabel:</strong>
+  <%= @part_detail.negotiabel %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @part_detail.quantity %>
+</p>
+
+<p>
+  <strong>Company part:</strong>
+  <%= @part_detail.company_part %>
+</p>
+
+<%= link_to 'Edit', edit_part_detail_path(@part_detail) %> |
+<%= link_to 'Back', part_details_path %>
