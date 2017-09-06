@@ -46,7 +46,7 @@ gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 gem 'rails-assets-bootbox', source: 'https://rails-assets.org'
 #Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
-
+gem 'money-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
