@@ -69,6 +69,6 @@ class CompanyPartsController < BackofficeController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def company_part_params
-    params.require(:company_part).permit(:company_id, :part_id, part_detail_attributes: %i[quantity price negotiable company_part_id])
+    params.require(:company_part).permit(:company_id, :part_id, part_detail_attributes: %i[quantity price negotiabel])
   end
 end
