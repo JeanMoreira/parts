@@ -10,62 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905204654) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "addresses", force: :cascade do |t|
-    t.string   "Street"
-    t.string   "address"
-    t.string   "district"
-    t.string   "city"
-    t.integer  "number"
-    t.string   "complement"
-    t.string   "state"
-    t.string   "zipCode"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "member_id"
-    t.index ["member_id"], name: "index_addresses_on_member_id", using: :btree
-  end
-
-  create_table "admins", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "name"
-    t.integer  "role"
-    t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
-  end
-
-  create_table "ads", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "part_id"
-    t.integer  "member_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "price_cents"
-    t.index ["member_id"], name: "index_ads_on_member_id", using: :btree
-    t.index ["part_id"], name: "index_ads_on_part_id", using: :btree
-  end
-
-  create_table "cars", force: :cascade do |t|
-    t.string   "model"
-    t.string   "maker"
-    t.date     "year"
-    t.date     "year_make"
 ActiveRecord::Schema.define(version: 20170906164330) do
 
   # These are extensions that must be enabled in order to support this database
@@ -139,99 +83,9 @@ ActiveRecord::Schema.define(version: 20170906164330) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "companies", force: :cascade do |t|
-    t.string   "name"
-    t.string   "cnpj"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "companies_members", id: false, force: :cascade do |t|
     t.integer "member_id",  null: false
     t.integer "company_id", null: false
-  end
-
-  create_table "company_parts", force: :cascade do |t|
-    t.integer  "company_id"
-    t.integer  "part_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_company_parts_on_company_id", using: :btree
-    t.index ["part_id"], name: "index_company_parts_on_part_id", using: :btree
-  end
-
-  create_table "members", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_members_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true, using: :btree
-  end
-
-  create_table "part_details", force: :cascade do |t|
-    t.integer  "price_cents"
-    t.boolean  "negotiabel"
-    t.integer  "quantity"
-    t.integer  "company_part_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["company_part_id"], name: "index_part_details_on_company_part_id", using: :btree
-  end
-
-  create_table "part_promotions", force: :cascade do |t|
-    t.integer  "needed_buy"
-    t.integer  "price_cents"
-    t.integer  "stock_quantity"
-    t.integer  "company_part_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["company_part_id"], name: "index_part_promotions_on_company_part_id", using: :btree
-  end
-
-  create_table "parts", force: :cascade do |t|
-    t.integer  "car_id"
-    t.string   "description"
-    t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["car_id"], name: "index_parts_on_car_id", using: :btree
-    t.index ["category_id"], name: "index_parts_on_category_id", using: :btree
-  end
-
-  create_table "phones", force: :cascade do |t|
-    t.string   "phone"
-    t.boolean  "active"
-    t.integer  "member_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["member_id"], name: "index_phones_on_member_id", using: :btree
-  create_table "companies_members", id: false, force: :cascade do |t|
-    t.integer "member_id",  null: false
-    t.integer "company_id", null: false
-  end
-
-  create_table "companies_parts", force: :cascade do |t|
-    t.integer  "company_id"
-    t.integer  "part_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_companies_parts_on_company_id", using: :btree
-    t.index ["part_id"], name: "index_companies_parts_on_part_id", using: :btree
   end
 
   create_table "company_parts", force: :cascade do |t|
@@ -315,8 +169,6 @@ ActiveRecord::Schema.define(version: 20170906164330) do
   add_foreign_key "addresses", "members"
   add_foreign_key "ads", "members"
   add_foreign_key "ads", "parts"
-  add_foreign_key "companies_parts", "companies"
-  add_foreign_key "companies_parts", "parts"
   add_foreign_key "company_parts", "companies"
   add_foreign_key "company_parts", "parts"
   add_foreign_key "part_details", "company_parts"
