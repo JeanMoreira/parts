@@ -19,23 +19,23 @@
       <div class="form-group">
         <label> Empresa</label>
         <%= f.collection_select :company_id, Company.all, :id, :name, {prompt:
-          "Selecione a empresa..."}, {class: "form-control", required: true} %>
+          "Selecione a empresa..."}, {class: "form-control", required: true}%>
       </div>
       <div class="form-group">
         <label>Carro</label>
-        <%= select_tag(:carro, options_for_select([['Carro1', 1], ['Carro2', 2]]
-        ), {prompt: "Selecione o carro...", class: "form-control"})  %>
+       <%= f.collection_select :id, Car.all, :id, :maker,
+        {prompt: "Selecione a car..."}, {class: "form-control", id:"idSelectCar"} %>
       </div>
       <div class="form-group">
         <label>Categoria</label>
-        <%= select_tag(:category, options_for_select([['Categoria1', 1],
-        ['Categoria2', 2]]), {prompt: "Selecione a categoria...",
-          class: "form-control"})  %>
+        
+        <%= f.collection_select :id, Category.all, :id, :description,
+        {prompt: "Selecione a car..."}, {class: "form-control", id:"idSelectCategory"} %>
       </div>
       <div class="form-group">
         <label> Peça</label>
         <%= f.collection_select :part_id, Part.all, :id, :description,
-        {prompt: "Selecione a peça..."}, {class: "form-control", required: true} %>
+        {prompt: "Selecione a peça..."}, {class: "form-control", required: true, id:"idSelectParts"} %>
       </div>
       <%= f.fields_for :part_detail do |ff| %>
         <div class="form-group">
@@ -61,3 +61,124 @@
 </div>
 <% end %>
 </div>
+
+<script type="text/javascript">
+ 
+  $(document).ready(function(){ // Metodo assegura que só vai ser executado se todos DOM for carregado.
+    $("#idSelectCar").on('change', function(){ // Evento para quando ocorre uma alteração no select que possui o Id idSelectCar.
+      var category = $("#idSelectCategory").val();
+      //caso a categoria já esteja selecionado ele deve fazer a acao de buscar a parti de dois parametros
+      //carro e category
+      if(category != null && category != ""){
+        
+        $.ajax({
+          url:"<%=company_parts_js_get_part_by_car_category_path%>",
+          type:"GET",
+          data:{paran_car: getValueSelected( $("#idSelectCar")),paran_category: getValueSelected( $("#idSelectCategory") )},
+          error: function(){
+            console.log("AJAX Error: #{textStatus}")
+          },
+          success: function(data) {
+          // var obj = $.parseJSON(data);
+            var myJsonString = JSON.stringify(data);// Converte  array de json em obj
+            var parts = JSON.parse(myJsonString);
+            removeAllOptionsSelect( $('#idSelectParts') );//remove todos os select já carregados pelo sistema
+            setParts(parts);//Altera a lista do select para ser carregado com as novas options do sistema.
+          }
+        });
+
+      }else{
+     
+        $.ajax({
+          url:"<%=company_parts_js_get_part_by_car_path%>",
+          type:"GET",
+          data:{param: getValueSelected( $("#idSelectCar") )},
+          error: function(){
+            console.log("AJAX Error: #{textStatus}")
+          },
+          success: function(data) {
+          // var obj = $.parseJSON(data);
+            var myJsonString = JSON.stringify(data);// Converte  array de json em obj
+            var parts = JSON.parse(myJsonString);
+            removeAllOptionsSelect( $('#idSelectParts') );//remove todos os select já carregados pelo sistema
+            setParts(parts);//Altera a lista do select para ser carregado com as novas options do sistema.
+          }
+        });
+      }
+    });
+
+    $("#idSelectCategory").on('change', function(){ // Evento para quando ocorre uma alteração no select que possui o Id idSelectCar.
+      var car = $("#idSelectCar").val();
+      //caso o carro já esteja selecionado ele deve fazer a acao de buscar a parti de dois parametros
+      //carro e category
+      if(car!= null && car != ""){
+
+        $.ajax({
+          url:"<%=company_parts_js_get_part_by_car_category_path%>",
+          type:"GET",
+          data:{paran_car: getValueSelected( $("#idSelectCar")),paran_category: getValueSelected( $("#idSelectCategory") )},
+          error: function(){
+            console.log("AJAX Error: #{textStatus}")
+          },
+          success: function(data) {
+          // var obj = $.parseJSON(data);
+            var myJsonString = JSON.stringify(data);// Converte  array de json em obj
+            var parts = JSON.parse(myJsonString);
+            removeAllOptionsSelect( $('#idSelectParts') );//remove todos os select já carregados pelo sistema
+            setParts(parts);//Altera a lista do select para ser carregado com as novas options do sistema.
+          }
+        });
+
+      }else{
+      
+        $.ajax({
+          url:"<%=company_parts_js_get_part_by_category_path%>",
+          type:"GET",
+          data:{param: getValueSelected( $("#idSelectCategory") )},
+          error: function(){
+            console.log("AJAX Error: #{textStatus}")
+          },
+          success: function(data) {
+          // var obj = $.parseJSON(data);
+            var myJsonString = JSON.stringify(data);// Converte  array de json em obj
+            var parts = JSON.parse(myJsonString);
+            removeAllOptionsSelect( $('#idSelectParts') );//remove todos os select já carregados pelo sistema
+            setParts(parts);//Altera a lista do select para ser carregado com as novas options do sistema.
+          }
+        });
+
+      } 
+    });
+  });
+
+
+  
+
+//Busca o valor selecionado pelo seleceted category.
+function getValueSelected(contexto){
+  var idCar = null;
+  if(contexto!= null){
+    idCar = contexto.val();
+  }
+  return idCar;
+}
+//Altera a lista do select e reecriar um novo select para ser exibida a parti do select selecionado.
+//variavel parts - lista de pecas.
+function setParts(parts){
+  $.each(parts, function(index, option) {
+    $option = $("<option></option>")
+      .attr("value", option.id)
+      .text(option.description);// Cria as options para montar o select 
+      $("#idSelectParts").append($option);// insere as novas options para o select.
+  }); 
+
+}
+//remove todos todas as options do select 
+function removeAllOptionsSelect(contexto){
+  contexto.find('option').remove().end().append('<option>Selecione a peça...</option>'); // limpa os dados da peca
+  
+}
+
+
+</script>
+

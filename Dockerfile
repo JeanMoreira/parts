@@ -1,7 +1,8 @@
 FROM ruby:2.3-slim
 # Instala nossas dependencias
+
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
-      build-essential nodejs libpq-dev
+      build-essential nodejs libpq-dev imagemagick 
 RUN apt-get install -y aptitude
 RUN aptitude install -y graphviz    
 # Seta nosso path
@@ -16,3 +17,4 @@ COPY Gemfile ./
 ENV BUNDLE_PATH /box
 # Copia nosso código para dentro do container
 COPY . .
+	

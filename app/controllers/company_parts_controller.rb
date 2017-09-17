@@ -16,6 +16,33 @@ class CompanyPartsController < BackofficeController
     @company_part = CompanyPart.new
     @company_part.build_part_detail
   end
+ 
+  #Busca  parts a parti da categoria passada por parametor.
+	#converte para json.
+  def get_part_by_category
+    @categorys = PartsController::PartService.get_part_by_category(params[:param]);
+    respond_to do |format|
+      format.json { render json: @categorys }
+    end  
+  end
+
+#Busca  parts a parti do carro passada por parametor.
+#converte para json.
+  def get_part_by_car
+    @cars = PartsController::PartService.get_part_by_car(params[:param]);
+    respond_to do |format|
+      format.json { render json: @cars }
+    end  
+  end
+
+#Busca  parts a parti do carro  e da category passada por parametor.
+#converte para json.
+  def get_part_by_car_category
+    @cars = PartsController::PartService.get_part_by_car_category(params[:paran_car], params[:paran_category]);
+    respond_to do |format|
+      format.json { render json: @cars }
+    end  
+  end
 
   # GET /company_parts/1/edit
   def edit; end

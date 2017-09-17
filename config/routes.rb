@@ -5,9 +5,15 @@ Rails.application.routes.draw do
   resources :part_promotions
   resources :part_details
   resources :company_parts
+  
   namespace :site do
     get 'home', to: 'home#index'
   end
+
+  
+ get 'company_parts/js/get_part_by_category', to: 'company_parts#get_part_by_category'
+ get 'company_parts/js/get_part_by_car', to: 'company_parts#get_part_by_car'
+ get 'company_parts/js/get_part_by_car_category', to: 'company_parts#get_part_by_car_category'
 
   get 'backoffice', to: 'backoffice/dashboard#index'
   # vai analisar um caminho chamado backoffice que logo depois vai ter o dashbard

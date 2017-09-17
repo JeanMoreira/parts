@@ -45,3 +45,6 @@ docker-compose run --rm website bundle exec
 rails g pundit:policy post
  
 git link https://github.com/elabs/pundit
+
+# Gerar migration junto ao paperclip
+docker-compose run --rm website bundle exec rails generate paperclip part picture

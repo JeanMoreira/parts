@@ -9,4 +9,6 @@ class CategoriesController::CategoryService
 		end
 		@category
 	end
+
+	
 end
