@@ -9,7 +9,7 @@ namespace :dev do
         title: Faker::Lorem.sentence([2,3,4,5].sample),
         description: "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo.",
         member: Member.first,
-        part: Part.all.sample,
+        part: Part.first,
         price: "#{Random.rand(500)}, #{Random.rand(99)}"
       )
     end
@@ -19,8 +19,10 @@ namespace :dev do
         title: Faker::Lorem.sentence([2,3,4,5].sample),
         description: "Tudo bom para esse produto, para uma nova coleção e novos teste para um novo mundo.",        
         member: Member.first,
-        part: Part.all.sample,
+        part: Part.first,
         price: "#{Random.rand(500)}, #{Random.rand(99)}"
+        
+
       )
     end
 

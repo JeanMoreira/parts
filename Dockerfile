@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -qq -y --no-install-recommends \
       build-essential nodejs libpq-dev imagemagick 
 RUN apt-get install -y aptitude
 RUN aptitude install -y graphviz    
+
 # Seta nosso path
 ENV INSTALL_PATH /parts
 # Cria nosso diretório
