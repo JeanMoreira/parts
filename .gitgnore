@@ -12,3 +12,9 @@ $ git add log
 $ echo tmp >> .gitignore
 $ git add .gitignore
 $ git commit -m "ignored log files and tmp dir"
+
+# Ignore all logfiles and tempfiles
+/public/system
+/log/*
+!/log/.keep
+/tmp

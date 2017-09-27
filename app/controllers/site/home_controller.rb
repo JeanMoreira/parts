@@ -1,8 +1,6 @@
-class Site::HomeController < ApplicationController
-  layout "site"
-
+class Site::HomeController < SiteController
   def index
   	@categories = Category.all
-  	@ads = Ad.limit(5).order(created_at: :desc)
+  	@ads = Ad.limit(6).order(created_at: :desc)
   end
 end

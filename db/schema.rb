@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908204438) do
+ActiveRecord::Schema.define(version: 20170927141014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,13 +52,13 @@ ActiveRecord::Schema.define(version: 20170908204438) do
   create_table "ads", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "part_id"
     t.integer  "member_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "price_cents"
+    t.integer  "company_part_id"
+    t.index ["company_part_id"], name: "index_ads_on_company_part_id", using: :btree
     t.index ["member_id"], name: "index_ads_on_member_id", using: :btree
-    t.index ["part_id"], name: "index_ads_on_part_id", using: :btree
   end
 
   create_table "cars", force: :cascade do |t|
@@ -171,8 +171,8 @@ ActiveRecord::Schema.define(version: 20170908204438) do
   end
 
   add_foreign_key "addresses", "members"
+  add_foreign_key "ads", "company_parts"
   add_foreign_key "ads", "members"
-  add_foreign_key "ads", "parts"
   add_foreign_key "company_parts", "companies"
   add_foreign_key "company_parts", "parts"
   add_foreign_key "part_details", "company_parts"
