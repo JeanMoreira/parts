@@ -64,8 +64,7 @@ group :development do
   gem 'faker', '~> 1.6', '>= 1.6.3'
   gem 'cpf_faker'
 
-  gem 'ruby-debug-ide', '~> 0.6.0'
-  gem 'debase', '~> 0.2.1'
+
 
 end
 

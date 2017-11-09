@@ -62,9 +62,6 @@ GEM
     concurrent-ruby (1.0.5)
     cpf_faker (1.3.0)
       clipboard
-    debase (0.2.1)
-      debase-ruby_core_source
-    debase-ruby_core_source (0.9.10)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -176,8 +173,6 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    ruby-debug-ide (0.6.0)
-      rake (>= 0.8.1)
     ruby-graphviz (1.2.3)
     sass (3.4.24)
     sass-rails (5.0.6)
@@ -224,7 +219,6 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   cpf_faker
-  debase (~> 0.2.1)
   devise
   devise-i18n
   enum_help
@@ -243,7 +237,6 @@ DEPENDENCIES
   rails-assets-notifyjs!
   rails-erd
   rails-i18n
-  ruby-debug-ide (~> 0.6.0)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
