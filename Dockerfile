@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -qq -y --no-install-recommends \
 RUN apt-get install -y aptitude
 RUN aptitude install -y graphviz    
 
+
 # Seta nosso path
 ENV INSTALL_PATH /parts
 # Cria nosso diretório

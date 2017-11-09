@@ -27,6 +27,18 @@
                 "server"
             ]
         },
+        
+        {
+            "name": "Attach to Docker",
+            "type": "Ruby",
+            "request": "attach",
+            "remotePort": "3000",
+            "remoteHost": "0.0.0.0",
+            "remoteWorkspaceRoot": "/parts",
+            "cwd": "${workspaceRoot}",
+            "showDebuggerOutput": true
+        },
+        
         {
             "name": "RSpec - all",
             "type": "Ruby",

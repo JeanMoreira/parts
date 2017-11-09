@@ -4,7 +4,7 @@ class Member < ApplicationRecord
   
   has_many :phones
   has_many :addresses
-  has_and_belongs_to_many :companies
+  
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

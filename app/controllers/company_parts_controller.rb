@@ -1,5 +1,5 @@
 class CompanyPartsController < BackofficeController
-  before_action :set_company_part, only: %i[show edit update destroy]
+  before_action :set_company_part, only: [:show, :edit, :update, :destroy]
 
   # GET /company_parts
   # GET /company_parts.json
@@ -14,7 +14,7 @@ class CompanyPartsController < BackofficeController
   # GET /company_parts/new
   def new
     @company_part = CompanyPart.new
-    @company_part.build_part_detail
+   # @company_part.build_part_detail
   end
  
   #Busca  parts a parti da categoria passada por parametor.
@@ -54,7 +54,7 @@ class CompanyPartsController < BackofficeController
 
     respond_to do |format|
       if @company_part.save
-        format.html { redirect_to @company_part, notice: 'Company part was successfully created.' }
+        format.html { redirect_to company_parts_path, notice: 'Company part was successfully created.' }
         format.json { render :show, status: :created, location: @company_part }
       else
         format.html { render :new }
@@ -68,7 +68,7 @@ class CompanyPartsController < BackofficeController
   def update
     respond_to do |format|
       if @company_part.update(company_part_params)
-        format.html { redirect_to @company_part, notice: 'Company part was successfully updated.' }
+        format.html { redirect_to company_parts_path, notice: 'Company part was successfully updated.' }
         format.json { render :show, status: :ok, location: @company_part }
       else
         format.html { render :edit }
@@ -96,6 +96,6 @@ class CompanyPartsController < BackofficeController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def company_part_params
-    params.require(:company_part).permit(:company_id, :part_id, part_detail_attributes: %i[quantity price negotiabel])
+    params.require(:company_part).permit(:company_id, :part_id)
   end
 end

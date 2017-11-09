@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     namespace :profile do 
       resources :ads
     end  
+    namespace :profile do 
+      resources :company_parts
+    end  
   end
 
   

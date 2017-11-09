@@ -23,7 +23,7 @@
       </div>
       <div class="form-group">
         <label>Carro</label>
-       <%= f.collection_select :id, Car.all, :id, :maker,
+       <%= f.collection_select :id, Car.all, :id, :model,
         {prompt: "Selecione a car..."}, {class: "form-control", id:"idSelectCar"} %>
       </div>
       <div class="form-group">
@@ -37,24 +37,7 @@
         <%= f.collection_select :part_id, Part.all, :id, :description,
         {prompt: "Selecione a peça..."}, {class: "form-control", required: true, id:"idSelectParts"} %>
       </div>
-      <%= f.fields_for :part_detail do |ff| %>
-        <div class="form-group">
-          <label> Preço </label>
-          <%= ff.text_field :price, placeholder: 'Informe o valor unitário...',
-          class: "form-control", required: true%>
-        </div>
-        <div class="form-group">
-          <label> Estoque </label>
-          <%= ff.text_field :quantity, placeholder: 'Informe a quantidadeem estoque...',
-          class: "form-control", required: true  %>
-        </div>
-        <div class="form-group">
-          <label> Negociável </label>
-          <%= ff.select :negotiabel, ([['Sim', true], ['Não', false]]), {selected:['Não', false]
-          },
-          { required: true, class: "form-control"}%>
-        </div>
-      <% end %>
+    
       <button type="submit" class="btn btn-default">Salvar</button>
     </div>
   </div>

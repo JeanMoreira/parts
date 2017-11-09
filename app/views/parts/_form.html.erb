@@ -20,19 +20,19 @@
     <div class="col-lg-6">
       <div class="form-group">
         <label>Car</label>
-        <%= f.collection_select :car_id, Category.all, :id, :description , {prompt: "Select a category"}, {class: "form-control"} %>
+        <%= f.collection_select :car_id, Car.all, :id, :model , {prompt: "Select a category"}, {class: "form-control"} %>
       </div>
-
+      <div class="form-group">
+        <label>Category</label>
+        <%= f.collection_select :category_id, Category.all, :id, :description, {prompt: "Select a category"}, {class: "form-control"} %>
+      </div>
       <div class="form-group">
         <label>description</label>
         <%= f.text_field :description, class:"form-control" %>
 
       </div>
       
-      <div class="form-group">
-        <label>Category</label>
-        <%= f.collection_select :category_id, Category.all, :id, :description, {prompt: "Select a category"}, {class: "form-control"} %>
-      </div>
+     
 
       
 

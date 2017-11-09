@@ -26,6 +26,15 @@
       </div>
     <button type="submit" class="btn btn-default">Salvar</button>
     </div>
+    <div class="col-lg-6"> 
+      <div class="form-group">
+        <label>Member</label>
+        <%= fields_for @companyMember do |u|%>
+          <%= u.collection_select :member_id, Member.all, :id, :email, {prompt:
+            "Selecione o membro..."}, {class: "form-control", required: true} %>
+          <% end %>
+      </div>
+    </div>
   </div>
 </div>
 <% end %>

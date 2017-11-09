@@ -1,5 +1,5 @@
 class CompaniesController < BackofficeController
-  before_action :set_company, only: %i[show edit update destroy]
+  before_action :set_company, only: %i[edit update destroy]
 
   # GET /companies
   # GET /companies.json
@@ -14,6 +14,7 @@ class CompaniesController < BackofficeController
   # GET /companies/new
   def new
     @company = Company.new
+    @companyMember = CompanyMember.new
   end
 
   # GET /companies/1/edit
@@ -22,11 +23,11 @@ class CompaniesController < BackofficeController
   # POST /companies
   # POST /companies.json
   def create
-    @company = Company.new(company_params)
-
+    # salva os mebros a empresa junto com a company
+    @company = CompaniesController::CompanyService.create_company_and_join_companyMember(company_params, company_member: :member_id)
     respond_to do |format|
       if @company.save
-        format.html { redirect_to @company, notice: 'Company was successfully created.' }
+        format.html { redirect_to companies_path, notice: 'Company was successfully created.' }
         format.json { render :show, status: :created, location: @company }
       else
         format.html { render :new }
@@ -70,4 +71,8 @@ class CompaniesController < BackofficeController
   def company_params
     params.require(:company).permit(:name, :cnpj)
   end
+
+  def company_member_params
+    params.require(:company_member).permit(:member_id)
+  end  
 end
