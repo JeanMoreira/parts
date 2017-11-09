@@ -1,0 +1,24 @@
+<h1>Listando Anúncios</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Image</th>
+      
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @companyParts.each do |cp| %>
+      <tr>
+        <th scope="row"><%= cp.id %></th>
+        <td> <%= image_tag  cp.part.picture(:thumb) %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Part Detail', new_site_profile_ad_path %>
