@@ -27,7 +27,7 @@
          <% @cars.each do |car| %>
          <tr>
           <td style="width: 40px"><%= car.id %></td>
-          <td><%= car.model %></td>
+          <td><%= car.model.description %></td>
           <td><%= car.maker %></td>
           <td><%= car.year %></td>
           <td><%= car.year_make %></td>
@@ -36,7 +36,7 @@
             <i class="fa fa-edit"></i>
             <% end %>
             
-            <%= link_to car_path(car), method: :delete, class: "btn btn-danger btn-circle", data:{confirm: t('messages.confirm_with', item: car.model)} do %>
+            <%= link_to car_path(car), method: :delete, class: "btn btn-danger btn-circle", data:{confirm: t('messages.confirm_with', item: car.maker)} do %>
             <i class="fa fa-minus"></i>
             <% end %>
 

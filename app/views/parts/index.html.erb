@@ -25,7 +25,11 @@
          <% @parts.each do |part| %>
          <tr>
           <td style="width: 40px"><%= part.id %></td>
-          <td><%= part.car.model %></td>
+          <% if (part.car.nil?) %>
+            <td><%= 'SEM CARRO' %></td>
+          <% else %>
+            <td><%= part.car.model.description %></td>
+          <% end %>  
           <td><%= part.description %></td>
           <td><%= part.category.description %></td>
 

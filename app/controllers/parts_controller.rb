@@ -6,6 +6,8 @@ class PartsController < BackofficeController
   def index
     @parts = Part.all
     @categories = Category.all
+    
+   
   end
 
   # GET /parts/1
@@ -70,6 +72,12 @@ class PartsController < BackofficeController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def part_params
+      #apos a verificacao ele vai ignorar o car_id
       params.require(:part).permit(:car_id, :description, :category_id)
+    end
+
+    #Verificar se o id do car_id esta em branco e informa 
+    def car_id_blank?
+      params[:part][:car_id].blank?
     end
 end

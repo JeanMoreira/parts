@@ -3,6 +3,7 @@ class CarsController::CarService
 
 	#criar carro
 	def self.create(params_car)
+	
 		@car = Car.new(params_car)
 		if @car.valid?
 			@car.save!

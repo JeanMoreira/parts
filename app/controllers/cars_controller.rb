@@ -31,7 +31,9 @@ class CarsController < BackofficeController
       unless @car.errors.any? 
         format.html { redirect_to cars_path, notice: 'Car was successfully created.' }
         format.json { render :show, status: :created, location: @car }
+       
       else
+        puts("Entrou no erro")
         format.html { render :new }
         format.json { render json: @car.errors, status: :unprocessable_entity }
       end
@@ -70,6 +72,6 @@ class CarsController < BackofficeController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:model, :maker, :year, :year_make)
+      params.require(:car).permit(:model_id, :maker, :year, :year_make)
     end
 end

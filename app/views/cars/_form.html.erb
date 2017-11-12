@@ -19,8 +19,8 @@
     <div class="col-lg-6">
       <div class="form-group">
         <label>Model</label>
-        <%= f.text_field :model, class:"form-control", placeholder:"Ex: Gol, palio..."%>
-      </div>
+        <%= f.collection_select :model_id, Model.all, :id, :description , {prompt: "Select a model"}, {class: "form-control"} %>
+      </div> 
 
       <div class="form-group">
         <label>Maker</label>

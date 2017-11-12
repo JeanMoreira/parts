@@ -1,5 +1,5 @@
 class Part < ApplicationRecord
-  belongs_to :car
+  belongs_to :car, required: false
   belongs_to :category
   has_many :company_part
   #paperclip
