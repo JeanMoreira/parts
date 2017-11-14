@@ -1,0 +1,131 @@
+<h1 class="panel panel-header">
+  <%= action_message %>
+</h1>
+<% if @ad.errors.any? %>
+  <% @ad.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <%= message %>.
+    </div>
+  <% end %>
+<% end %>
+
+<%= form_for  @ad do |f| %>
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control", placeholder: "Título" %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="form-group">
+      <%= f.label :price %>  
+      <%= f.text_field :price, class: "form-control", placeholder: "Título" %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="form-group">
+      <label>Empresa</label>
+      <%= f.collection_select :id, Company.all, :id, :name,
+      {prompt: "Selecione a empresa..."}, {class: "form-control", id:"idSelectEmpresa"} %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="form-group">
+      <label>Peça</label>
+      <%= f.collection_select :id, Part.all, :id, :description,
+      {prompt: "Selecione a Peça..."}, {class: "form-control", id:"idSelectPart"} %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control", rows: 5 %>
+    </div>
+  </div>
+</div>
+
+<%= submit_tag "#{t('buttons.send')}", class: "btn btn-default"  %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    changeSelectEmpresaAjax();
+    changeSelectPartsAjax();
+ 
+  });
+
+  //Quando o select é alterado o mesmo busca no banco as pecas
+  //referente a empresa se a peca já não estiver selecionada.
+  function changeSelectEmpresaAjax(){
+    $("#idSelectEmpresa").on('change', function(){
+        $.ajax({
+          url:"<%=ads_js_get_part_by_company_part_path%>",
+          type:"GET",
+          data:{param_part: getValueSelected( $("#idSelectEmpresa"))},
+          error: function(){
+            console.log("AJAX Error: #{textStatus}")
+          },
+          success: function(data) {
+          // var obj = $.parseJSON(data);
+            var myJsonString = JSON.stringify(data);// Converte  array de json em obj
+            var parts = JSON.parse(myJsonString);
+            console.log(parts);
+            removeAllOptionsSelect( $('#idSelectPart') );
+            setParts(parts);
+            // removeAllOptionsSelect( $('#idSelectParts') );//remove todos os select já carregados pelo sistema
+            //setParts(parts);//Altera a lista do select para ser carregado com as novas options do sistema.
+          }
+        }); 
+     });
+  }
+  //quando o select é alterado o mesmo busca no banco as empresas 
+  //referente as pecas se a empresa não estiver já selecionada
+  function changeSelectPartsAjax(){
+    $("#idSelectPart").on('change', function(){
+      console.log("testes22")  
+ 
+ 
+    })
+
+  }
+
+  function getValueSelected(contexto){
+    var idObj = null;
+    if(contexto!= null){
+      idObj = contexto.val();
+    }
+    return idObj;
+  }
+
+  function setParts(parts){
+    $.each(parts, function(index, option) {
+      $option = $("<option></option>")
+        .attr("value", option.id)
+        .text(option.description);// Cria as options para montar o select 
+        $("#idSelectPart").append($option);// insere as novas options para o select.
+    }); 
+  }
+  
+
+  function removeAllOptionsSelect(contexto){
+    contexto.find('option').remove().end().append('<option>Selecione a peça...</option>'); // limpa os dados da peca
+  }
+
+
+</script>
+
+<% end %>

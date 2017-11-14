@@ -22,5 +22,7 @@ class CompaniesController::CompanyService
         end   
         @company 
     end
-	
+    
+    
+   
 end

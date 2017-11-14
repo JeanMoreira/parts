@@ -28,5 +28,11 @@ class PartsController::PartService
 		@parts = Part.where("car_id = ? and category_id = ?", params_car, params_category)
 	end
 
+	#busca as partes que existem dentro da company part.
+	def self.get_part_by_company_part(param_part)
+		#@parts = Part.joins("join company_parts c on c.part_id = parts.id").where("company_parts.part_id = ?", params_part)
+		@parts = Part.joins(:company_part).where("company_parts.part_id = ?", param_part)
+		#@parts = Part.all
+	end	
 end
 

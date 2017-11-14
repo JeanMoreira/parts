@@ -37,7 +37,7 @@
             <i class="fa fa-edit"></i>
             <% end %>
             
-            <%= link_to part_path(part), method: :delete, class: "btn btn-danger btn-circle", data:{confirm: t('messages.confirm_with', item: part.car.model)} do %>
+            <%= link_to part_path(part), method: :delete, class: "btn btn-danger btn-circle", data:{confirm: t('messages.confirm_with', item: part.description)} do %>
             <i class="fa fa-minus"></i>
             <% end %>
 

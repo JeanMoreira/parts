@@ -7,7 +7,6 @@ class PartsController < BackofficeController
     @parts = Part.all
     @categories = Category.all
     
-   
   end
 
   # GET /parts/1

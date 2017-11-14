@@ -24,6 +24,8 @@ Rails.application.routes.draw do
  get 'company_parts/js/get_part_by_category', to: 'company_parts#get_part_by_category'
  get 'company_parts/js/get_part_by_car', to: 'company_parts#get_part_by_car'
  get 'company_parts/js/get_part_by_car_category', to: 'company_parts#get_part_by_car_category'
+ get 'ads/js/get_part_by_company_part', to: 'ads#get_part_by_company_part'
+
 
   get 'backoffice', to: 'backoffice/dashboard#index'
   # vai analisar um caminho chamado backoffice que logo depois vai ter o dashbard
@@ -42,6 +44,7 @@ Rails.application.routes.draw do
   resources :companies
   resources :phones
   resources :addresses
+  resources :ads
 
   devise_for :admins, :skip => [:registrations]
   devise_for :members
