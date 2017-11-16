@@ -31,6 +31,19 @@ class AdsController < BackofficeController
         end
 	end
   
+     #busca as partes que existem dentro da company part.
+	def get_company_by_company_part
+        @parts = CompaniesController::CompanyService.get_company_by_company_part(params[:param_part])
+        if !@parts.nil?
+            respond_to do |format|
+                format.json{ render json: @parts}
+            end    
+        else
+            #não foi encontrado as informacoes
+        end
+	end
+
+
 
     def update
        @ad.update(params) 
@@ -38,7 +51,7 @@ class AdsController < BackofficeController
 
     def create
     #acesso a um servico onde estara as regras de negocio do sistema.
-        @ad = AdService.create(ad_params)
+        @ad = AdsController::AdService.create(params)
         respond_to do |format|  
         unless @ad.errors.any? 
             format.html { redirect_to ads_path, notice: 'Ad was successfully created.' }
@@ -57,6 +70,6 @@ class AdsController < BackofficeController
     end
 
     def set_params
-        params.require(:ad).permit(:description, :member_id, :part_id, :price_cents)
+        params.require(:ad).permit(:description, :member_id, :price, :title, :company_part_id)
     end
 end

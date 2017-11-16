@@ -29,10 +29,14 @@ class PartsController::PartService
 	end
 
 	#busca as partes que existem dentro da company part.
-	def self.get_part_by_company_part(param_part)
-		#@parts = Part.joins("join company_parts c on c.part_id = parts.id").where("company_parts.part_id = ?", params_part)
-		@parts = Part.joins(:company_part).where("company_parts.part_id = ?", param_part)
-		#@parts = Part.all
+	def self.get_part_by_company_part(param_company)
+		if param_company.nil? or param_company ==""
+			@parts = Part.all
+		else
+			@parts = Part.joins(:company_part).where("company_parts.company_id = ?", param_company)
+		end
+		
+		
 	end	
 end
 

@@ -1,7 +1,9 @@
 class CompaniesController::CompanyService	
     include ActiveModel::Model    
     attr_accessor :company
+    attr_accessor :companies
     attr_accessor :companyMember
+    attr_accessor :companyPart
 
     #salva a empresa e vincula o companinha com o membro
     def self.create_company_and_join_companyMember(params_company, id_member)
@@ -23,6 +25,14 @@ class CompaniesController::CompanyService
         @company 
     end
     
-    
+    #busca as partes que existem dentro da company part.
+	def self.get_company_by_company_part(param_part)
+		@companies = Company.joins(:company_part).where("company_parts.part_id = ?", param_part)
+	end	
    
+    def self.get_company_part_by_part_company(param_part, param_company)
+        @companyPart = CompanyPart.where("part_id = ? and company_id = ?",param_part, param_company).first
+    end
+
+
 end
