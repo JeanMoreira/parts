@@ -47,6 +47,15 @@ class AdsController < BackofficeController
 
     def update
        @ad = AdsController::AdService.update(params)
+       respond_to do |format|  
+            unless @ad.errors.any? 
+                format.html { redirect_to ads_path, notice: 'Ad was successfully created.' }
+                format.json { render :show, status: :created, location: @ad }
+            else
+                format.html { render :new }
+                format.json { render json: @ad.errors, status: :unprocessable_entity }
+            end
+        end 
     end
 
     def create

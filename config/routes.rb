@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get 'home', to: 'home#index'
     namespace :profile do 
       resources :dashboard , only: [:index]
+      resources :parts, except:[:show]
     end   
     namespace :profile do 
       resources :ads
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
     namespace :profile do 
       resources :company_parts
     end  
+    
+
   end
 
   

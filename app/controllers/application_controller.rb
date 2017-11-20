@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 	def user_not_authorized
 	    flash[:alert] = "Você não esta autorizado a executar essa navegação."
 	    redirect_to(request.referrer || root_path)
-  	end
+  end
 
 	def layout_by_resource
 	  if devise_controller? && resource_name == :admin

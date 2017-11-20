@@ -34,9 +34,12 @@ class PartsController::PartService
 			@parts = Part.all
 		else
 			@parts = Part.joins(:company_part).where("company_parts.company_id = ?", param_company)
-		end
-		
-		
+		end	
 	end	
+
+	def self.get_part_by_member(current_member)
+		puts("Entrou aqui")
+		@parts = Part.joins(:company_part, :company, :CompanyMember).where("CompanyMember.member_id = ?", current_member)
+	end
 end
 
