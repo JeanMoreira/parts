@@ -46,7 +46,7 @@ class AdsController < BackofficeController
 
 
     def update
-       @ad.update(params) 
+       @ad = AdsController::AdService.update(params)
     end
 
     def create

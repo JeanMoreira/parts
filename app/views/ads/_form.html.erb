@@ -34,10 +34,13 @@
   <div class="col-xs-6">
     <div class="form-group">
       <label>Empresa</label>
-      <%= collection_select :company_part, :company_id, Company.all, :id, :name,
-      {prompt: "Selecione a empresa..."}, {class: "form-control", id:"idSelectEmpresa"} %>
-
-    
+      <% if @ad.company_part.nil? %>
+        <%= collection_select :company_part, :company_id, Company.all, :id, :name,
+        {prompt: "Selecione a empresa..."}, {class: "form-control", id:"idSelectEmpresa"} %>
+      <% else %>
+        <%= collection_select :company_part, :company_id, Company.all, :id, :name,
+        {prompt: "Selecione a empresa...", selected: @ad.company_part.company_id}, {class: "form-control", id:"idSelectEmpresa"} %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -46,8 +49,13 @@
   <div class="col-xs-6">
     <div class="form-group">
       <label>Peça</label>
-      <%= collection_select :company_part, :part_id, Part.all, :id, :description,
-      {prompt: "Selecione a Peça..."}, {class: "form-control", id:"idSelectPart"} %>
+      <% if @ad.company_part.nil? %>
+        <%= collection_select :company_part, :part_id, Part.all, :id, :description,
+        {prompt: "Selecione a Peça..."}, {class: "form-control", id:"idSelectPart"} %>
+      <% else %>
+        <%= collection_select :company_part, :part_id, Part.all, :id, :description,
+        {prompt: "Selecione a Peça...", selected: @ad.company_part.part_id}, {class: "form-control", id:"idSelectPart"} %>
+      <% end %>
     </div>
   </div>
 </div>
